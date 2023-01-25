@@ -1,16 +1,14 @@
-<?xml-stylesheet type="text/xsl" href="https://qisumi.github.io/sitemap.xsl"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
-  <url>
-    <loc>https://qisumi.github.io/categories/</loc>
-  </url>
+  <sitemap>
+    <loc>https://qisumi.github.io/en/sitemap.xml</loc>
+    
+  </sitemap>
   
-  <url>
-    <loc>https://qisumi.github.io/</loc>
-  </url>
+  <sitemap>
+    <loc>https://qisumi.github.io/zh-cn/sitemap.xml</loc>
+    
+  </sitemap>
   
-  <url>
-    <loc>https://qisumi.github.io/tags/</loc>
-  </url>
-  
-</urlset>
+</sitemapindex>
