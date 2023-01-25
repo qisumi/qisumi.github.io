@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>技术笔记 on Qisumi</title>
+    <link>https://qisumi.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/</link>
+    <description>Recent content in 技术笔记 on Qisumi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Qisumi</copyright>
+    <lastBuildDate>Wed, 25 Jan 2023 21:42:00 +0800</lastBuildDate><atom:link href="https://qisumi.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PowerShell 使用简明笔记</title>
+      <link>https://qisumi.github.io/post/howtousepowershell/</link>
+      <pubDate>Wed, 25 Jan 2023 21:42:00 +0800</pubDate>
+      
+      <guid>https://qisumi.github.io/post/howtousepowershell/</guid>
+      <description>Getting Started 安装和下载 PowerShell3.0集成在了所有的Windows10以上系统中。该文档也是基于Powershell3.0的。但仍然建议安</description>
+    </item>
+    
+  </channel>
+</rss>

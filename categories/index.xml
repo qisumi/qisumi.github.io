@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Jane - A super concise theme for Hugo</title>
+    <title>Categories on Qisumi</title>
     <link>https://qisumi.github.io/categories/</link>
-    <description>Recent content in Categories on Jane - A super concise theme for Hugo</description>
+    <description>Recent content in Categories on Qisumi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <copyright>Qisumi</copyright><atom:link href="https://qisumi.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>Qisumi</copyright>
+    <lastBuildDate>Wed, 25 Jan 2023 21:42:00 +0800</lastBuildDate><atom:link href="https://qisumi.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cheatsheet</title>
+      <link>https://qisumi.github.io/categories/cheatsheet/</link>
+      <pubDate>Wed, 25 Jan 2023 21:42:00 +0800</pubDate>
+      
+      <guid>https://qisumi.github.io/categories/cheatsheet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>技术笔记</title>
+      <link>https://qisumi.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Wed, 25 Jan 2023 21:42:00 +0800</pubDate>
+      
+      <guid>https://qisumi.github.io/categories/%E6%8A%80%E6%9C%AF%E7%AC%94%E8%AE%B0/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

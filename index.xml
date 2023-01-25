@@ -1,15 +1,1363 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Jane - A super concise theme for Hugo</title>
+    <title>Qisumi</title>
     <link>https://qisumi.github.io/</link>
-    <description>Recent content on Jane - A super concise theme for Hugo</description>
+    <description>Recent content on Qisumi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <copyright>Qisumi</copyright>
+    <lastBuildDate>Wed, 25 Jan 2023 21:42:00 +0800</lastBuildDate>
     
         <atom:link href="https://qisumi.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>PowerShell CheatSheet</title>
+      <link>https://qisumi.github.io/post/cmdletcheatsheet/</link>
+      <pubDate>Wed, 25 Jan 2023 21:42:00 +0800</pubDate>
+      
+      <guid>https://qisumi.github.io/post/cmdletcheatsheet/</guid>
+      
+        <description>&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;cmdlet(alias)&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Description&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;#(&amp;lt;#&amp;hellip;#&amp;gt;)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;单行注释/&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Set-ExecutionPolicy Unrestricted&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;设置脚本执行策略为不限制&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Get-Help(man)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;查询帮助文档&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Get-Alias(gal)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;查询cmdlet别名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Set-Alias&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;新增或设置别名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;New-Alias&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;创建别名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Export-Alias&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;导出别名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Clear-Host(clear)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;清空终端&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Write-Host&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;向终端写入输出，可以指定颜色和背景色&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Out-File(&amp;gt;)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;将输出发送到特定文件(重定向)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Write-Output(echo)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;向管道写入输出，如果没有接收命令，则会显示到终端&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Get-Date&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;显示时间，或返回DateTIme对象&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Foreach-Object&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;对输入对象集合执行语句块&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Sort-Object&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;根据属性值对对象排序&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Where-Object&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;按照语句从集合中选择（过滤）对象&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Select-Object&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;以不同方式选取对象子集，或者对对象选取属性子集，也可以为对象添加计算属性&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Create-Object&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;创建对象&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Measure-Object&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;计算对象的数值属性，例如计数、度量&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Get-Location(pwd)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;查看当前目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Get-Location(cd)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;进入指定目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Clear-Content(clc)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;清空文件内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Add-Content(ac)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;向文件中追加内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Get-Content(cat)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;读取文件内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Set-Content(sc)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;覆盖文件内容&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Get-Childitem(ls)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;查看目录下文件&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Get-Item&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;查看该目录或文件(区别在于对于目录的处理)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;New-Item(mkdir, touch)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;创建文件或目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Copy-Item(cp)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;复制文件或目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Remove-Item(rm)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;删除文件或目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Move-Item(mv)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;移动文件或目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Rename-Iteam(rni)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;重命名文件或目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Test-Path&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;检查指定的目录或文件是否存在&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Start-Process(start)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;启动进程，可以指定参数列表和工作目录，以及是否打开新窗口、重定向等&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Invoke-WebRequest(curl, wget)&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;下载网络资源，执行网络请求&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Import-Module&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;导入模块&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Export-ModuleMember&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;导出模块&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Get-Module&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;查看已导入模块&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Remove-Module&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;删除已导入模块&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>PowerShell 使用简明笔记</title>
+      <link>https://qisumi.github.io/post/howtousepowershell/</link>
+      <pubDate>Wed, 25 Jan 2023 21:42:00 +0800</pubDate>
+      
+      <guid>https://qisumi.github.io/post/howtousepowershell/</guid>
+      
+        <description>&lt;h1 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h1&gt;
+&lt;h2 id=&#34;安装和下载&#34;&gt;安装和下载&lt;/h2&gt;
+&lt;p&gt;PowerShell3.0集成在了所有的Windows10以上系统中。该文档也是基于Powershell3.0的。但仍然建议安装&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://learn.microsoft.com/zh-cn/windows/terminal/install&#34;&gt;Windows 终端安装 | Microsoft Learn&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://learn.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows?WT.mc_id=THOMASMAURER-blog-thmaure&amp;amp;view=powershell-7.2&#34;&gt;在 Windows 上安装 PowerShell - PowerShell | Microsoft Learn&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;虽然最新的PS已经到达了7.x版本，但是不用担心，因为某种原因，他和PS3.0的差别并不是很大。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;一个有趣的事情：大多数情况下，软件版本号的管理遵循&lt;a href=&#34;https://semver.org/lang/zh-CN/&#34;&gt;semver语义化版本表达&lt;/a&gt;。简要来说，一个版本号的格式为&lt;code&gt;X.Y.Z&lt;/code&gt;。他们分别表示&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;主版本号：当你做了不兼容的 API 修改，&lt;/li&gt;
+&lt;li&gt;次版本号：当你做了向下兼容的功能性新增，&lt;/li&gt;
+&lt;li&gt;修订号：当你做了向下兼容的问题修正。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;而主版本号，往往就会体现在软件名上。例如&lt;code&gt;Python2&lt;/code&gt;和&lt;code&gt;Python3&lt;/code&gt;并不兼容，所以造成了事实上的社区分裂，他们已经变成了两个语言。&lt;/p&gt;
+&lt;p&gt;由于这样的原因，软件主版本号的变更实际上非常罕见。例如&lt;code&gt;numpy&lt;/code&gt;在2006年发布&lt;code&gt;v1.0.0&lt;/code&gt;，直到现在，主版本号仍然没有变化，为&lt;code&gt;1.24.1&lt;/code&gt;（2023年）。&lt;/p&gt;
+&lt;p&gt;然而事情总不是一成不变的，有竞争就会有内卷。Chrome带来了“按照时间发布版本”的习惯。不论功能变化如何，每个固定的时间就会发布新的版本。用户潜意识会认为主版本号变化带来了非常多的功能改进，就更愿意升级。于是现在很多大公司的项目也有类似的行为（包括PS）。Chrome的大版本号已经达到了&lt;code&gt;105&lt;/code&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&#34;像在linux中一样使用命令&#34;&gt;像在Linux中一样使用命令&lt;/h2&gt;
+&lt;p&gt;就像在Linux中一样，你可以使用诸如&lt;code&gt;cd&lt;/code&gt; &lt;code&gt;ls&lt;/code&gt; &lt;code&gt;mkdir&lt;/code&gt; &lt;code&gt;cat&lt;/code&gt;等命令进行基本操作，但是并非所有的Linux指令都在PS中得到支持。如下图：PS中的命令往往返回一个二维表格。这与Linux中&lt;code&gt;ls -l&lt;/code&gt;的行为类似，但是有本质的不同。Linux的命令行是基于文本的，而PS中的命令行是基于对象的。在Linux中，任何命令的输出都是基于文本的，根据对字符串的处理，我们可以做到对命令输出的处理，例如检索、行计数、过滤等等。但是这在某种角度上是低效的，因为数据在不同指令和程序之间流动需要解析字符串来转换格式。&lt;/p&gt;
+&lt;!-- raw HTML omitted --&gt;
+&lt;h2 id=&#34;命令的基本形式-cmdlet&#34;&gt;命令的基本形式 Cmdlet&lt;/h2&gt;
+&lt;p&gt;在Linux中往往使用缩写作为命令的名称，例如&lt;code&gt;mkdir = make directory&lt;/code&gt; &lt;code&gt;cd = change directory&lt;/code&gt;。这个是一个充满geek风格的行为，但是也有一些历史遗留的原因。那个时候的终端还不支持自动补全等功能。在PowerShell中，一般使用成为&lt;code&gt;Cmdlet&lt;/code&gt;的命令，他的格式为&lt;strong&gt;动词-名词&lt;/strong&gt;，例如&lt;code&gt;Get-Help&lt;/code&gt; &lt;code&gt;Write-Output&lt;/code&gt;.这样做的好处是，对于初学者来说很容易了解命令的含义，缺点是比较冗长，但这不是问题，因为在PowerShell中由良好的自动补全功能（使用&lt;code&gt;Tab&lt;/code&gt;键）。&lt;/p&gt;
+&lt;p&gt;在&lt;a href=&#34;./CmdletCheatsheet.md&#34;&gt;Cmdlet Cheatsheet&lt;/a&gt;中记录了一些常用的Cmdlet和对应的功能描述。&lt;/p&gt;
+&lt;h2 id=&#34;命令的别名&#34;&gt;命令的别名&lt;/h2&gt;
+&lt;p&gt;实际上&lt;code&gt;mkdir&lt;/code&gt;等Linux命令在PS的支持是通过别名来实现的，我们可以给一个很长的命令起一个别名。使用   &lt;code&gt;*-Alias&lt;/code&gt;系列命令可以查看、增加、修改和删除别名。&lt;/p&gt;
+&lt;h2 id=&#34;使用get-help和get-command命令&#34;&gt;使用Get-Help和Get-Command命令&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Get-Help&lt;/code&gt;是最重要的命令，因为他可以帮助我们获得一个命令的帮助。一般我们使用这两种命令。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 获得基本帮助，会输出下图信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Get-Help Set-Location
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 查看使用例子，在下一小节展示&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Get-Help Set-Location -Example
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;&lt;code&gt;Get-Command&lt;/code&gt;命令用来帮助我们发现我们可能需要但还不知道的命令。由于Cmdlet的特殊形式，我们可能会启发式的猜测我们所需要命令的名字。例如我们知道&lt;code&gt;Set-Location&lt;/code&gt;相当于&lt;code&gt;cd&lt;/code&gt;，那么&lt;code&gt;pwd&lt;/code&gt;命令应当可能是&lt;code&gt;Get-Location&lt;/code&gt;。不论如何，他至少应该是&lt;code&gt;*-Location&lt;/code&gt;的形式，那么我们查找一并获得如下输出下。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Get-Command *-Location
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;CommandType     Name                       Version    Source
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-----------     ----                       -------    ------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Cmdlet          Get-Location               &lt;span style=&#34;color:#ae81ff&#34;&gt;7.0&lt;/span&gt;.0.0    Microsoft.PowerShell.Management
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Cmdlet          Pop-Location               &lt;span style=&#34;color:#ae81ff&#34;&gt;7.0&lt;/span&gt;.0.0    Microsoft.PowerShell.Management
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Cmdlet          Push-Location              &lt;span style=&#34;color:#ae81ff&#34;&gt;7.0&lt;/span&gt;.0.0    Microsoft.PowerShell.Management
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Cmdlet          Set-Location               &lt;span style=&#34;color:#ae81ff&#34;&gt;7.0&lt;/span&gt;.0.0    Microsoft.PowerShell.Management
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;不难猜测&lt;code&gt;Get-Location&lt;/code&gt;是我们所需要的命令，那他具体如何使用的？使用&lt;code&gt;Get-Help&lt;/code&gt;。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Get-Help Get-Location -Example
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;这样我们就知道了这条命令使用的基本方法（这里有很多例子，但我只截图了最简单的一个）。&lt;/p&gt;
+&lt;h2 id=&#34;按顺序运行多个命令&#34;&gt;按顺序运行多个命令&lt;/h2&gt;
+&lt;p&gt;使用&lt;code&gt;;&lt;/code&gt;分割多个命令&lt;/p&gt;
+&lt;h2 id=&#34;使用管道组合多个命令&#34;&gt;使用管道组合多个命令&lt;/h2&gt;
+&lt;p&gt;多个使用&lt;code&gt;|&lt;/code&gt;分割的命令序列称为管道，管道从上一条命令获得输出，并作为输入传输给下一条命令。下面有一个例子。这个例子中首先使用&lt;code&gt;Get-Location&lt;/code&gt;获得当前路径对象，通过管道传输给&lt;code&gt;ls&lt;/code&gt;命令。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Get-Location | ls
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;http://blogoss.qisumi.cn/image-20230114134323256.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;powershell基于对象&#34;&gt;Powershell基于对象&lt;/h2&gt;
+&lt;p&gt;从之前的图中我们不难看出，大多数命令的输出都是二维表格的形式，实际上这是一系列对象。表格的表头是对象的属性。对于&lt;code&gt;ls&lt;/code&gt;的输出可以这样理解。&lt;code&gt;ls&lt;/code&gt;输出一系列&lt;strong&gt;文件对象&lt;/strong&gt;。这些对象拥有(&lt;code&gt;Mode, LastWriteTime, Length Name&lt;/code&gt;)这些&lt;strong&gt;属性&lt;/strong&gt;。在管道中传输的也是对象。这样做的好处是数据在传输到下一条命令时可以提前校验格式，还可以避免解析字符串带来的性能开销。&lt;/p&gt;
+&lt;h2 id=&#34;powershell大小写不敏感&#34;&gt;Powershell大小写不敏感&lt;/h2&gt;
+&lt;p&gt;Powershell中所有的&lt;strong&gt;关键字、命令&lt;/strong&gt;都是大小写不敏感的。&lt;/p&gt;
+&lt;h2 id=&#34;输入输出重定向&#34;&gt;输入输出重定向&lt;/h2&gt;
+&lt;p&gt;Powershell支持输出重定向运算符&lt;code&gt;&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt;。但是不支持输入重定向。但是我们总是可以使用 &lt;code&gt;Get-Content |&lt;/code&gt;来代替输入重定向，即先获取文件的内容，再通过管道传输给下一条命令。&lt;/p&gt;
+&lt;h2 id=&#34;对输出进行处理&#34;&gt;对输出进行处理&lt;/h2&gt;
+&lt;p&gt;我们现在已经知道，PS是基于对象的。那么在这种情况下，我们对输出进行处理，往往使用&lt;code&gt;*-Object&lt;/code&gt;系列命令。如下有几个简单的例子。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 给输出按照修改时间属性排序&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ls | Sort-Object -Property LastWriteTime
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 给输出去重&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ls | Sort-Object -Unique
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 按照条件过滤输出，这里选择Length属性大于100的&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ls | Where-Object -Property Length &lt;span style=&#34;color:#f92672&#34;&gt;-ge&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 查看输出了多少条记录, 相当于Linux中的 wc -l&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ls | Measure-Object
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;使用脚本&#34;&gt;使用脚本&lt;/h2&gt;
+&lt;p&gt;PS脚本以&lt;code&gt;.ps1&lt;/code&gt;为后缀，PS脚本的写法除了可以使用PS命令之外，和正常的编程语言大致相同。可以参考&lt;strong&gt;Docs&lt;/strong&gt;部分详细了解。这里介绍一些最简单的特征。&lt;/p&gt;
+&lt;h3 id=&#34;使用方法&#34;&gt;使用方法&lt;/h3&gt;
+&lt;p&gt;在PS中先输入&lt;code&gt;Set-ExecutionPolicy Unrestricted&lt;/code&gt;之后，就开启了使用脚本的权限。然后使用脚本的路径来调用脚本。&lt;/p&gt;
+&lt;h3 id=&#34;变量&#34;&gt;变量&lt;/h3&gt;
+&lt;p&gt;PS中的变量必须以&lt;code&gt;$&lt;/code&gt;开头，可以赋值为整数、浮点数、字符串等。字符串使用&lt;code&gt;&#39;&lt;/code&gt;或&lt;code&gt;&amp;quot;&lt;/code&gt;包裹。&lt;/p&gt;
+&lt;h3 id=&#34;特殊结构&#34;&gt;特殊结构&lt;/h3&gt;
+&lt;p&gt;PS中的变量还可以是&lt;strong&gt;数组、哈希表、对象&lt;/strong&gt;。具体的使用方法查看&lt;strong&gt;Docs&lt;/strong&gt;部分对应章节。&lt;/p&gt;
+&lt;h3 id=&#34;函数&#34;&gt;函数&lt;/h3&gt;
+&lt;p&gt;PS中可以定义函数，PS中函数的定义可以很复杂，也可以很简单。具体的使用方法查看&lt;strong&gt;Docs&lt;/strong&gt;部分对应章节。&lt;/p&gt;
+&lt;h3 id=&#34;流程控制&#34;&gt;流程控制&lt;/h3&gt;
+&lt;p&gt;PS中支持&lt;code&gt;if else elseif&lt;/code&gt; &lt;code&gt;switch case default&lt;/code&gt; &lt;code&gt;while for foreach&lt;/code&gt;  &lt;code&gt;do while&lt;/code&gt; &lt;code&gt;break continue&lt;/code&gt; &lt;code&gt;try catch throw&lt;/code&gt;这些在其他语言中也很常用的关键字，用法大致相同。有些许不同的地方主要在&lt;code&gt;break continue&lt;/code&gt; 查看&lt;strong&gt;Doc/语句/标记语句&lt;/strong&gt;小节进行详细了解。&lt;/p&gt;
+&lt;h3 id=&#34;运算符&#34;&gt;运算符&lt;/h3&gt;
+&lt;p&gt;PS中的数值运算符、赋值和其他语言类似，包括&lt;code&gt;+ - * / += -= *= /= ++ -- = ()&lt;/code&gt; 。但是其他运算符都使用了非符号表示，这样做的好处是可以简化解析，并且可以定义大量的运算符而不用担心特殊符号被用完。这些运算符统一使用 &lt;code&gt;-name&lt;/code&gt;表示。例如相等&lt;code&gt;==&lt;/code&gt;用&lt;code&gt;-eq&lt;/code&gt;表示。所以&lt;code&gt;if&lt;/code&gt;语句往往是&lt;code&gt;if($a -gt 10)&lt;/code&gt;的形式，这里表达的是&lt;strong&gt;如果$a变量大于10&lt;/strong&gt;.详细的运算符参见&lt;strong&gt;Docs/运算符&lt;/strong&gt;章节。这里列出一些常用的运算符。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;eq -&amp;gt; equal&lt;/code&gt; 等于&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ne -&amp;gt; not equal&lt;/code&gt; 不等于&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;gt -&amp;gt; greater than&lt;/code&gt;大于&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;lt -&amp;gt; less then&lt;/code&gt; 小于&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ge -&amp;gt; great equal&lt;/code&gt;大于等于&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;le -&amp;gt; less equal&lt;/code&gt; 小于等于&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;AND&lt;/code&gt; &lt;code&gt;OR&lt;/code&gt; &lt;code&gt;NOT&lt;/code&gt; &lt;code&gt;XOR&lt;/code&gt; 逻辑运算符&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1 id=&#34;docs&#34;&gt;Docs&lt;/h1&gt;
+&lt;h2 id=&#34;基本概念&#34;&gt;基本概念&lt;/h2&gt;
+&lt;h3 id=&#34;cmdlet&#34;&gt;Cmdlet&lt;/h3&gt;
+&lt;p&gt;Cmdlet是PowerShell环境中实现功能的特殊命令。遵循“动词-名词”模式，例如：&lt;code&gt;set-childItem&lt;/code&gt;。Cmdlet的输入输出都是对象，而且通过管道输入和输出。Cmdlet处理对象序列和集合时是线性的，同时只处理一个。一些Cmdlet拥有缩写，通常是再Linux中有相同功能的命令。&lt;/p&gt;
+&lt;h3 id=&#34;与linux-shell的不同&#34;&gt;与Linux Shell的不同&lt;/h3&gt;
+&lt;p&gt;PowerShell大部分情况下处理的都是对象。而Linux Shell只处理文本。相对应的，Linux Shell的内置命令的输入输出也都是文本。&lt;/p&gt;
+&lt;h3 id=&#34;基本术语&#34;&gt;基本术语&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;别名：将较长的命令赋予较短的别名&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;环境变量：从操作系统环境中获取变量，例如 &lt;code&gt;$PATH&lt;/code&gt;.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;函数：Powershell脚本中可以创建并使用函数&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;变量：Powershell脚本中可以定义并使用变量&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;工作位置：在调用命令时，如果没有显示指定路径，往往使用工作位置的路径&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;项：包括别名、变量、函数、环境变量、或者文件和目录。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;路径名：包括绝对路径、相对路径、特殊路径。绝对路径一般是从&lt;code&gt;C:/&lt;/code&gt;或者&lt;code&gt;D:/&lt;/code&gt;开始（Linux上则从&lt;code&gt;/&lt;/code&gt;开始。相对路径相对于工作位置开始。特殊路径见对应章节。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;模块：模块作为一个脚本，可以导出变量和函数，供其他脚本或者shell导入使用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;重载和调用解析：函数名相同但函数签名&lt;sup id=&#34;fnref:1&#34;&gt;&lt;a href=&#34;#fn:1&#34; class=&#34;footnote-ref&#34; role=&#34;doc-noteref&#34;&gt;1&lt;/a&gt;&lt;/sup&gt;不同的函数。PowerShell和大多数支持重载的编程语言一样，会自动按照参数解析。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;管道：管道是由管道运算符 &lt;code&gt;|&lt;/code&gt;分隔的一个或多个命令序列，每个命令接受前置任务的输入，并将输出写入到后续任务。管道末尾处的输出默认会输出到控制台，也可以重定向到文件。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;通配符表达式&#34;&gt;通配符表达式&lt;/h3&gt;
+&lt;p&gt;Powershell除了支持正则表达式，也在一些地方支持简单通配符，规则如下：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;元素&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;除*、? 和 [ 之外的字符&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;匹配一个字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;*&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;与零个或多个字符匹配。 若要匹配 * 字符，请使用 [*]。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;?&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;匹配任何单字符。 如需匹配 ? 字符，请使用 [?]。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;[set]&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;匹配 set 中的任意一个字符，不能为空如果 set 以 ] 开头，则右方括号被视为 set 的一部分，下一个右方括号终止 set；否则，第一个右方括号终止 set。如果 set 以 - 开头或结尾，则减号连字符被视为 set 的一部分；否则，它指示一系列连续的 Unicode 代码点，连字符减号两边的字符开始包含在内的范围分隔符。 例如，A-Z 指示 26 个大写英文字母，0-9 指示 10 个十进制数字。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;特殊路径名&#34;&gt;特殊路径名&lt;/h3&gt;
+&lt;p&gt;对于相对路径，有如下规则：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;符号&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;说明&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;相对路径&lt;/th&gt;
+&lt;th style=&#34;text-align:left&#34;&gt;完全限定的路径&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;.&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;当前工作位置&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;.\System&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;C:\Windows\System&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;..&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;当前工作位置的父级&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;..\Program Files&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;C:\Program Files&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;\&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;当前工作位置的驱动器根&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;\Program Files&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;C:\Program Files&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;无&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;无特殊字符&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;System&lt;/code&gt;&lt;/td&gt;
+&lt;td style=&#34;text-align:left&#34;&gt;&lt;code&gt;C:\Windows\System&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;变量-1&#34;&gt;变量&lt;/h2&gt;
+&lt;h3 id=&#34;变量基础&#34;&gt;变量基础&lt;/h3&gt;
+&lt;p&gt;变量以&lt;code&gt;$&lt;/code&gt;开头，不区分大小写，不包含空格和特殊字符。默认情况下变量的值为&lt;code&gt;$NULL&lt;/code&gt;。特别的，如果需要在变量名称中使用特殊字符，需要将变量名置于大括号中，例如&lt;code&gt;{my-variable}&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;变量使用&lt;code&gt;=&lt;/code&gt;赋值，使用&lt;code&gt;Clear-Variable&lt;/code&gt;删除变量，也可以将其赋值为&lt;code&gt;$null&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;对于变量的类型，可以使用&lt;code&gt;GetType()&lt;/code&gt;方法查看。&lt;/p&gt;
+&lt;p&gt;默认创建的变量都是局部变量，如果需要创建特殊的变量遵循以下规则：&lt;code&gt;$global: var&lt;/code&gt;创建全局变量。&lt;code&gt;$script: var&lt;/code&gt;创建脚本变量。&lt;/p&gt;
+&lt;p&gt;变量根据用户能否修改、由谁创建分为三种。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;类型&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;创建者&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;用户读写&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;用户变量&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;用户&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;读写&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;自动变量&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;系统&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;只读&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;首选项变量&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;系统&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;读写&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;可变修饰符&#34;&gt;可变修饰符&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;ReadOnly 可访问，不可修改，可删除&lt;/li&gt;
+&lt;li&gt;Constant 可访问，不可修改，不可删除&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;自动变量&#34;&gt;自动变量&lt;/h3&gt;
+&lt;p&gt;自动变量由系统创建和维护，用户可读不可写。常见的自动变量有：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;变量&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$$&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;最后执行的命令中的最后一部分&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$?&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;最后一个操作执行状态是否成功&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$_&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;在管道对象集合的遍历语法中表示当前对象&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$foreach&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;表示ForEach循环的枚举数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$true $false $null&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;表示布尔值和空值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$IsLinux $IsWindows $IsMacOS&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;查询平台&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$input&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;枚举传递给函数的所有输入，仅适用于脚本快和功能&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$Home&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;用户的Home目录&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;首选项变量&#34;&gt;首选项变量&lt;/h3&gt;
+&lt;p&gt;常见的首选项变量有&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;变量&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;默认值&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$OutputEncoding&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;UTF8Encoding对象&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;$MaximumHistoryCount&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;4096&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;运算符-1&#34;&gt;运算符&lt;/h2&gt;
+&lt;p&gt;任何列出而不加说明的运算符，其作用和常见编程语言中的类似。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在 PowerShell 中存在两种运算符，一种使用符号表达，例如 + - * / 。而另外一种是使用单词来表达运算。这样做的好处是可以避免符号不够用的情况，这些运算符的使用方式为 &lt;code&gt;-op&lt;/code&gt;。以 &lt;code&gt;eq&lt;/code&gt;为例：&lt;code&gt;$a -eq $b&lt;/code&gt;.表示 &lt;code&gt;a==b&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;算术运算符&#34;&gt;算术运算符&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;+&lt;/code&gt; &lt;code&gt;-&lt;/code&gt; &lt;code&gt;*&lt;/code&gt; &lt;code&gt;/&lt;/code&gt; &lt;code&gt;%&lt;/code&gt; &lt;code&gt;++&lt;/code&gt; &lt;code&gt;--&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;特别说明：这里的乘法运算符还用于数组、字符串的复制。加法用于字符串、数组、哈希表的连接&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;比较运算符&#34;&gt;比较运算符&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;eq&lt;/code&gt; &lt;code&gt;ne&lt;/code&gt; &lt;code&gt;gt&lt;/code&gt; &lt;code&gt;ge&lt;/code&gt; &lt;code&gt;lt&lt;/code&gt; &lt;code&gt;le&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;特别说明：PowerShell 允许一个集合和一个操作数进行比较。但返回的不是一个布尔数组，而是返回集合的子集，其中的项满足在比较中返回了 &lt;code&gt;$True&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是一种常用，但是又不太常用的运算符表达方式，如果你熟悉Latex应该会比较熟悉。其简要含义包括：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;eq -&amp;gt; equal&lt;/code&gt; 等于&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ne -&amp;gt; not equal&lt;/code&gt; 不等于&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;gt -&amp;gt; greater than, lt -&amp;gt; less then&lt;/code&gt; 大于或小于&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;code&gt;ge -&amp;gt; great equal, lt -&amp;gt; less equal&lt;/code&gt; 大于等于或小于等于&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;赋值运算符&#34;&gt;赋值运算符&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;=&lt;/code&gt; &lt;code&gt;+=&lt;/code&gt; &lt;code&gt;-=&lt;/code&gt; &lt;code&gt;*=&lt;/code&gt; &lt;code&gt;\=&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;逻辑运算符&#34;&gt;逻辑运算符&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;AND&lt;/code&gt; &lt;code&gt;OR&lt;/code&gt; &lt;code&gt;NOT&lt;/code&gt; &lt;code&gt;XOR&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;位运算符&#34;&gt;位运算符&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;BAND&lt;/code&gt; &lt;code&gt;BOR&lt;/code&gt; &lt;code&gt;BXOR&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;一些用于字符串的运算符&#34;&gt;一些用于字符串的运算符&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;not&lt;/code&gt; 前缀表示否定&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;c&lt;/code&gt; 前缀表示大小写敏感（对非字符串运算不起作用）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;i&lt;/code&gt; 前缀表示显示大小写不敏感（对非字符串运算不起作用）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;    -as           -ccontains     -ceq
+    -cge          -cgt           -cle
+    -clike        -clt           -cmatch
+    -cne          -cnotcontains  -cnotlike
+    -cnotmatch    -contains      -creplace
+    -csplit       -eq            -ge
+    -gt           -icontains     -ieq
+    -ige          -igt           -ile
+    -ilike        -ilt           -imatch
+    -in           -ine           -inotcontains
+    -inotlike     -inotmatch     -ireplace
+    -is           -isnot         -isplit
+    -join         -le            -like
+    -lt           -match         -ne
+    -notcontains  -notin         -notlike
+    -notmatch     -replace       -shl
+    -shr          -split
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;其他运算符&#34;&gt;其他运算符&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;管道运算符：&lt;code&gt;|&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;输出重定向运算符：&lt;code&gt;&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;gt;&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;调用、属性访问运算符：&lt;code&gt;.&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;逗号运算符（用于创建数组）：&lt;code&gt;,&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;字符串操作运算符：&lt;code&gt;split&lt;/code&gt; &lt;code&gt;join&lt;/code&gt; &lt;code&gt;replace&lt;/code&gt; 及其前缀变体&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;强制类型转换运算符：&lt;code&gt;[type]&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;范围运算符（生成一维数组）：&lt;code&gt;..&lt;/code&gt; 例如 &lt;code&gt;1..3&lt;/code&gt;表示&lt;code&gt;1,2,3&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;字符串格式化运算符：&lt;code&gt;{N[,M][:FormatString]}&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;包含运算符：&lt;code&gt;contains&lt;/code&gt; &lt;code&gt;in&lt;/code&gt; 及其 &lt;code&gt;not&lt;/code&gt; 前缀变体。他们的区别在于语义，对于&lt;code&gt;contains&lt;/code&gt;数组为左操作数，对于&lt;code&gt;in&lt;/code&gt;则相反。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;类型测试运算符 ：&lt;code&gt;is&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;模式匹配运算符：&lt;code&gt;match&lt;/code&gt; &lt;code&gt;like&lt;/code&gt; 及其前缀变体。其中&lt;code&gt;match&lt;/code&gt;支持正则表达式，而&lt;code&gt;like&lt;/code&gt;支持通配符表达式。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;对于 match 和 replace 这种可以接受正则表达式的函数来说，还支持子表达式，在返回的结果中按照顺序（从0开始，按左括号出现的顺序）来排列。对于 replace 来说，使用 $1 $2 来表达。也可以使用?&lt;!-- raw HTML omitted --&gt;来定义具名匹配项而不是让 $matches 中的键成为从0开始的索引&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h2 id=&#34;表达式&#34;&gt;表达式&lt;/h2&gt;
+&lt;p&gt;表达式是一系列运算符和操作数，它指定方法、函数、可写位置或值；指定值的计算；产生一个或多个副作用；或执行它们的某种组合。例如&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;文本 123 是一个指定 int 值 123 的表达式。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;表达式 &lt;code&gt;1,2,3,4&lt;/code&gt; 指定具有所示值的 4 元素数组对象。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;表达式 &lt;code&gt;10.4 * $a&lt;/code&gt; 指定计算。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;表达式 &lt;code&gt;$a++&lt;/code&gt; 会产生副作用。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;表达式 &lt;code&gt;$a[$i--] = $b[++$j]&lt;/code&gt; 执行这些操作的组合。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;在PowerShell的表达式中，运算优先级和其他编程语言没有明显区别，包括使用括号改变优先级，不做更多介绍。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;顶级表达式的值可能会被自动放入管道。如果某个&lt;strong&gt;顶级表达式&lt;/strong&gt;包含副作用运算符（例如赋值、自增自减运算符），那么其值不会被放入管道，反之则会。顶级表达式指不属于某个更大表达式的表达式。可以使用括号强制将一个顶级表达式变为非顶级表达式，例如&lt;code&gt;($a++)&lt;/code&gt;是一个非顶级表达式&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;调用表达式&#34;&gt;调用表达式&lt;/h3&gt;
+&lt;p&gt;调用表达式通过&lt;code&gt;.&lt;/code&gt;或者&lt;code&gt;::&lt;/code&gt;来完成。例如&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;math&lt;/span&gt;]::Sqrt(&lt;span style=&#34;color:#ae81ff&#34;&gt;2.0&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;char&lt;/span&gt;]::IsUpper(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$b.ToUpper()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;这里有一种特殊的语法，&lt;code&gt;[math]::Sqrt&lt;/code&gt; 这实际上是因为PowerShell受&lt;code&gt;.Net&lt;/code&gt;支持，所以也可以使用&lt;code&gt;.Net&lt;/code&gt;中的很多特性。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;表达式-1&#34;&gt;$(&amp;hellip;)表达式&lt;/h3&gt;
+&lt;p&gt;对内部语句列表（使用&lt;code&gt;;&lt;/code&gt;分割）分别求值，如果得到单个元素，则结果为该元素。没有结果则为 &lt;code&gt;$null&lt;/code&gt;。否则则为对象数组。并将结果作为一个对象数组写入管道。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$j = &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$($i = &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;# pipeline gets nothing&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$(($i = &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)) &lt;span style=&#34;color:#75715e&#34;&gt;# pipeline gets int 10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$($i = &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;; $j) &lt;span style=&#34;color:#75715e&#34;&gt;# pipeline gets int 20&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$(($i = &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;); $j) &lt;span style=&#34;color:#75715e&#34;&gt;# pipeline gets [object[]](10,20)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$(($i = &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;); ++$j) &lt;span style=&#34;color:#75715e&#34;&gt;# pipeline gets int 10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$(($i = &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;); (++$j)) &lt;span style=&#34;color:#75715e&#34;&gt;# pipeline gets [object[]](10,22)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$($i = &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;; ++$j) &lt;span style=&#34;color:#75715e&#34;&gt;# pipeline gets nothing&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;# pipeline gets [object[]](2,4,6)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$a = @(&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;)          &lt;span style=&#34;color:#75715e&#34;&gt;# result is array of 3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;@($a)                  &lt;span style=&#34;color:#75715e&#34;&gt;# result is the same array of 3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;@(@($a))               &lt;span style=&#34;color:#75715e&#34;&gt;# result is the same array of 3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;表达式-2&#34;&gt;@(&amp;hellip;)表达式&lt;/h3&gt;
+&lt;p&gt;与&lt;code&gt;$(,,,)&lt;/code&gt;表达式类似。区别在于，在没有值时，&lt;code&gt;@(...)&lt;/code&gt;会得到一个空数组，而&lt;code&gt;$(...)&lt;/code&gt;会得到&lt;code&gt;$null&lt;/code&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;表达式-3&#34;&gt;@{&amp;hellip;}表达式&lt;/h3&gt;
+&lt;p&gt;用于创建哈希表，详见相关章节。&lt;/p&gt;
+&lt;h2 id=&#34;命令&#34;&gt;命令&lt;/h2&gt;
+&lt;h3 id=&#34;命令调用&#34;&gt;命令调用&lt;/h3&gt;
+&lt;p&gt;命令调用包含命令的名称和若干个自变量（参数），合法的命令可以是：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;别名&lt;/li&gt;
+&lt;li&gt;函数&lt;/li&gt;
+&lt;li&gt;cmdlet&lt;/li&gt;
+&lt;li&gt;外部命令&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;{}&lt;/code&gt;包裹的合法PowerShell语句&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;对于重名的命令，也按照上述顺序（优先级）进行查找。&lt;/p&gt;
+&lt;p&gt;对于命令调用，也有另外一种方式，它允许我们使用字符串来调用。这样我们就可以把命令储存到变量中，例如以下三种调用是等价的。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Get-Factorial &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;amp; Get-Factorial &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&amp;amp; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Get-Factorial&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;和大多数编程语言类似，如果一个命令是函数，那么它支持直接或间接的 **递归 **调用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;命令参数&#34;&gt;命令参数&lt;/h3&gt;
+&lt;p&gt;调用命令时可以输入若干变量作为参数，参数名以&lt;code&gt;-&lt;/code&gt;开头，并且后面紧随若干空白符，再绑定一个参数值。常见命令参数有以下三种形式：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;开关参数：参数的类型为布尔值。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Set-MyProcess -Strict
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Set-MyProcess -Strict: $true
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;普通参数&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Get-Power -base 5 -exponent 3
+Get-Power -exponent 3 -base 5
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;位置参数&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Get-Power &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&#34;https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_commonparameters&#34;&gt;通用参数&lt;/a&gt;：指可以和任何 cmdlet 一起使用的参数。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;错误处理&#34;&gt;错误处理&lt;/h3&gt;
+&lt;p&gt;命令失败时，将被视为错误，关于错误的信息记录在错误记录中，其类型未指定。&lt;/p&gt;
+&lt;p&gt;错误属于两个类别之一。 它要么终止运算（终止错误），要么不终止运算（非终止错误）。 对于终止错误，系统会记录错误并停止运算。 对于非终止错误，系统会记录错误并继续运算。&lt;/p&gt;
+&lt;p&gt;自动变量 &lt;code&gt;$Error&lt;/code&gt; 包含一组表示最近错误的错误记录，最近的错误在 &lt;code&gt;$Error[0]&lt;/code&gt; 中。 此集合保留在缓冲区中，这样在添加新记录时会放弃旧记录。 自动变量 &lt;code&gt;$MaximumErrorCount&lt;/code&gt; 控制可存储的记录数。&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$Error&lt;/code&gt; 包含在同一个集合中混合在一起的所有命令中的所有错误。 若要从特定命令中收集错误，请使用常用参数 &lt;code&gt;ErrorVariable&lt;/code&gt;，该参数允许指定用户定义的变量来保存集合。&lt;/p&gt;
+&lt;h2 id=&#34;管道&#34;&gt;管道&lt;/h2&gt;
+&lt;p&gt;管道是由管道运算符 &lt;code&gt;|&lt;/code&gt;分隔的一个或多个命令序列，每个命令接受前置任务的输入，并将输出写入到后续任务。管道末尾处的输出默认会输出到控制台，也可以重定向到文件。&lt;/p&gt;
+&lt;h3 id=&#34;管道语句&#34;&gt;管道语句&lt;/h3&gt;
+&lt;p&gt;管道语句是使用&lt;code&gt;|&lt;/code&gt;连接的若干个命令或表达式。PowerShell会用如下规则处理这些自变量作为命令的参数。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;如果不是表达式，担保函任意文本，没有空格，视为保留大小写的字符串。&lt;/li&gt;
+&lt;li&gt;如果使用引号包裹，则视为包含空格的字符串&lt;/li&gt;
+&lt;li&gt;用括号包裹自变量会导致计算该表达式的值&lt;/li&gt;
+&lt;li&gt;如果是参数则进行对应的参数解析&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;管道的流式处理&#34;&gt;管道的流式处理&lt;/h3&gt;
+&lt;p&gt;如果某个命令写入一个对象，则它的后续任务会接收该对象，然后在将其自己的对象写入到其后续对象之后终止。 但是，如果一个命令写入多个对象，则每次将一个对象传递到后续任务命令，该命令对每个对象执行一次。 此行为称为流式处理。 在流处理过程中，对象会在可用时立即写入管道，而不是在整个集合生成后。&lt;/p&gt;
+&lt;h2 id=&#34;字符串&#34;&gt;字符串&lt;/h2&gt;
+&lt;p&gt;Powershell中的字符串可以由单引号或双引号定义。他们都是&lt;code&gt;System.String&lt;/code&gt;对象（来自&lt;code&gt;.Net&lt;/code&gt;平台）。&lt;/p&gt;
+&lt;h3 id=&#34;字符串常用操作&#34;&gt;字符串常用操作&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 串联的三种方法&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$s1+$s2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$s1,$s2 -join &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;.COM&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 输出{$s1}.COM{$s2}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;System.String&lt;/span&gt;]::Concat($s1,$s2)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#子串&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$s.SubString(&lt;span style=&#34;color:#66d9ef&#34;&gt;begin&lt;/span&gt;,len)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 格式化内插&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$s = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{0:n2,10} {1:p1,-10}&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-f&lt;/span&gt; $s1,$s2 &lt;span style=&#34;color:#75715e&#34;&gt;# :n2表示保留2位小数 :p1先保留小数点后一位再转换为百分数，,10 ,-10表示向右(左)对齐并补足10位。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 替换&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$s.Replace(s1,s2) 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$s &lt;span style=&#34;color:#f92672&#34;&gt;-replace&lt;/span&gt; s1,s2 &lt;span style=&#34;color:#75715e&#34;&gt;# 大小写不敏感，使用creplace则大小写敏感&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$s &lt;span style=&#34;color:#f92672&#34;&gt;-creplace&lt;/span&gt; s1,s2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 包含&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$s. &lt;span style=&#34;color:#f92672&#34;&gt;-match&lt;/span&gt; $s1 &lt;span style=&#34;color:#75715e&#34;&gt;# 大小写不敏感, 使用cmatch则大小写敏感&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$s.Contains($s1) &lt;span style=&#34;color:#75715e&#34;&gt;# 大小写敏感&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 过滤器&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$s &lt;span style=&#34;color:#f92672&#34;&gt;-like&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;3.14*&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# -like支持通配符&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 分割&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$s.Split($s1,[&lt;span style=&#34;color:#66d9ef&#34;&gt;StringSplitOptions&lt;/span&gt;]::RemoveEmptyEntries) &lt;span style=&#34;color:#75715e&#34;&gt;# 指定删除空的切割结果&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 比较&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$s1.CompareTo($s1)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 长度&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$s.Length
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 插入&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$s.Insert(&lt;span style=&#34;color:#66d9ef&#34;&gt;begin&lt;/span&gt;, $s1)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 删除&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$s.Remove(&lt;span style=&#34;color:#66d9ef&#34;&gt;begin&lt;/span&gt;, length)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# join&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;10&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;20&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;30&amp;#34;&lt;/span&gt; -join(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;,&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;# 10,20,30&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;字符串格式化&#34;&gt;字符串格式化&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 字符串格式化的详细规则&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;`$i` = &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;; $j = &lt;span style=&#34;color:#ae81ff&#34;&gt;12&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;{2} &amp;lt;= {0} + {1}\&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;`n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-f&lt;/span&gt; $i,$j,($i+$j)  &lt;span style=&#34;color:#75715e&#34;&gt;# 22 &amp;lt;= 10 + 12&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;gt;{0,3}&amp;lt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-f&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;                          &lt;span style=&#34;color:#75715e&#34;&gt;# &amp;gt; 5&amp;lt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;gt;{0,-3}&amp;lt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-f&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;                         &lt;span style=&#34;color:#75715e&#34;&gt;# &amp;gt;5 &amp;lt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;gt;{0,3:000}&amp;lt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-f&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;                      &lt;span style=&#34;color:#75715e&#34;&gt;# &amp;gt;005&amp;lt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;gt;{0,5:0.00}&amp;lt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-f&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5.0&lt;/span&gt;                   &lt;span style=&#34;color:#75715e&#34;&gt;# &amp;gt; 5.00&amp;lt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;gt;{0:C}&amp;lt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-f&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;1234567.888&lt;/span&gt;                &lt;span style=&#34;color:#75715e&#34;&gt;# &amp;gt;$1,234,567.89&amp;lt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;gt;{0:C}&amp;lt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-f&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;-1234.56&lt;/span&gt;                   &lt;span style=&#34;color:#75715e&#34;&gt;# &amp;gt;($1,234.56)&amp;lt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;gt;{0,12:e2}&amp;lt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-f&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;123.456e2&lt;/span&gt;              &lt;span style=&#34;color:#75715e&#34;&gt;# &amp;gt; 1.23e+004&amp;lt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;gt;{0,-12:p}&amp;lt;&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-f&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;-0.252&lt;/span&gt;                 &lt;span style=&#34;color:#75715e&#34;&gt;# &amp;gt;-25.20 % &amp;lt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$format = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&amp;gt;{0:x8}&amp;lt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$format &lt;span style=&#34;color:#f92672&#34;&gt;-f&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;123455&lt;/span&gt;                       &lt;span style=&#34;color:#75715e&#34;&gt;# &amp;gt;0001e23f&amp;lt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;语句&#34;&gt;语句&lt;/h2&gt;
+&lt;h3 id=&#34;语句块&#34;&gt;语句块&lt;/h3&gt;
+&lt;p&gt;和&lt;code&gt;C/C++&lt;/code&gt; &lt;code&gt;JAVA&lt;/code&gt;类似，PowerShell使用&lt;code&gt;{...}&lt;/code&gt;来表示语句块，一个语句块内可以有若干语句。类似&lt;code&gt;JavaScript&lt;/code&gt;，PowerShell不强制使用&lt;code&gt;;&lt;/code&gt;作为语句分隔符。&lt;/p&gt;
+&lt;h3 id=&#34;语句的值&#34;&gt;语句的值&lt;/h3&gt;
+&lt;p&gt;语句的值是它写入管道的一组累计值。 如果语句写入一个标量值，则该值是语句的值。 如果语句写入多个值，则该语句的值是一组按写入顺序存储在不受约束的一维数组的元素中的值。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 循环没有迭代，也没有向管道写入任何内容。 语句的值为 $null。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$v = &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; ($i = &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;; $i &lt;span style=&#34;color:#f92672&#34;&gt;-le&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;; ++$i) { }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 循环迭代了五次，但没有向管道写入任何内容。 语句的值为 $null。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$v = &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; ($i = &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;; $i &lt;span style=&#34;color:#f92672&#34;&gt;-le&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;; ++$i) { }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 循环迭代了五次，每次向管道写入 int 值 $i。 语句的值是值为 Length 5 的 object[]。&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$v = &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; ($i = &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;; $i &lt;span style=&#34;color:#f92672&#34;&gt;-le&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;; ++$i) { $i }
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;标记语句&#34;&gt;标记语句&lt;/h3&gt;
+&lt;p&gt;和大多数编程编程语言不同的是，PowerShell的&lt;code&gt;break/continue&lt;/code&gt;可以根据标记跳出若干层循环。这是一个非常好的特性。就像下面这样使用：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;:&lt;/span&gt;go_here &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; ($j &lt;span style=&#34;color:#f92672&#34;&gt;-le&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# ...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;:&lt;/span&gt;labelA
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; ($i = &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;; $i &lt;span style=&#34;color:#f92672&#34;&gt;-le&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;; ++$i) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;:&lt;/span&gt;labelB
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; ($j = &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;; $j &lt;span style=&#34;color:#f92672&#34;&gt;-le&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;; ++$j) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;:&lt;/span&gt;labelC
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; ($k = &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;; $k &lt;span style=&#34;color:#f92672&#34;&gt;-le&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;; ++$k) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;# ...&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;blockquote&gt;
+&lt;p&gt;实际上，对设计良好的代码，我们不应该需要这个特性，如果我们的代码中有多层循环，并且还有复杂的&lt;code&gt;break&lt;/code&gt;需求，说明我们需要修改代码的设计，但是有总比没有好。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;if语句&#34;&gt;IF语句&lt;/h3&gt;
+&lt;p&gt;和大多数语言类似的设计，包含 &lt;code&gt;if&lt;/code&gt; &lt;code&gt;elseif&lt;/code&gt; &lt;code&gt;else&lt;/code&gt; 三个关键字。&lt;/p&gt;
+&lt;h3 id=&#34;whiledo-while语句&#34;&gt;WHILE，DO WHILE语句&lt;/h3&gt;
+&lt;p&gt;和大多数语言类似的设计。&lt;/p&gt;
+&lt;h3 id=&#34;for语句&#34;&gt;FOR语句&lt;/h3&gt;
+&lt;p&gt;和大多数语言类似的设计。&lt;/p&gt;
+&lt;h3 id=&#34;foreach语句&#34;&gt;FOREACH语句&lt;/h3&gt;
+&lt;p&gt;通常和 &lt;code&gt;in&lt;/code&gt; 搭配使用。可遍历对象包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;数组&lt;/li&gt;
+&lt;li&gt;范围&lt;/li&gt;
+&lt;li&gt;数组字面量&lt;/li&gt;
+&lt;li&gt;管道输出的对象集合&lt;/li&gt;
+&lt;li&gt;集合的&lt;code&gt;Keys&lt;/code&gt; &lt;code&gt;Values&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;示例：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 数组&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;foreach&lt;/span&gt; ($e &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; $a) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 范围&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;foreach&lt;/span&gt; ($e &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;-5&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;.5&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 数组字面量&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;foreach&lt;/span&gt; ($t &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; [&lt;span style=&#34;color:#66d9ef&#34;&gt;byte], [int], [long&lt;/span&gt;]) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    $t::MaxValue &lt;span style=&#34;color:#75715e&#34;&gt;# get static property&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 管道的输出&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;foreach&lt;/span&gt; ($f &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; Get-ChildItem *.txt) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ...
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 集合的Keys或Values&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$h1 = @{ FirstName = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;James&amp;#34;&lt;/span&gt;; LastName = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Anderson&amp;#34;&lt;/span&gt;; IDNum = &lt;span style=&#34;color:#ae81ff&#34;&gt;123&lt;/span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;foreach&lt;/span&gt; ($e &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; $h1.Keys) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Key is &amp;#34;&lt;/span&gt; + $e + &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;, Value is &amp;#34;&lt;/span&gt; + $h1[$e]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;流程控制语句&#34;&gt;流程控制语句&lt;/h3&gt;
+&lt;p&gt;以下语句和其他语言的设计类似，但有一些区别&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;break&lt;/code&gt; （可以使用标签）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;continue&lt;/code&gt; （可以使用标签）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;exit $code&lt;/code&gt;（终止当前脚本）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;switch default&lt;/code&gt; （可以使用字符串作为值，甚至可以使用正则表达式，不需要使用显性的&lt;code&gt;break&lt;/code&gt;）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;异常处理语句&#34;&gt;异常处理语句&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;try&lt;/code&gt; &lt;code&gt;catch&lt;/code&gt; &lt;code&gt;finally&lt;/code&gt; &lt;code&gt;thorw&lt;/code&gt; 和其它语言的设计类似&lt;/p&gt;
+&lt;h2 id=&#34;数组&#34;&gt;数组&lt;/h2&gt;
+&lt;p&gt;在PowerShell中声明数组，使用逗号分割的多个值给变量赋值。默认情况下数组是多态数组，不要求元素具有相同的类型。&lt;em&gt;同时，PowerShell中的类型是引用类型，这意味着简单的赋值不会创建新的对象。&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;$var = v1, v2, v3,...,vn&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;在PowerSehll中访问数组元素，使用方括号，下标从&lt;code&gt;0&lt;/code&gt;开始，支持负数、范围。对于多维数组，PowerShell使用类似Python的语法，即&lt;code&gt;arr[0,0]&lt;/code&gt;这种形式。&lt;/p&gt;
+&lt;h3 id=&#34;数组的创建和访问&#34;&gt;数组的创建和访问&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$arr = &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 创建一维数组&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$mat = New-Object &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;object[,]&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 创建二维数组&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 一般访问&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$arr[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 访问范围&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$arr[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;.4&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 负数索引&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$arr[&lt;span style=&#34;color:#ae81ff&#34;&gt;-1&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;常用操作&#34;&gt;常用操作&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$a = &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 获取数组长度&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$a.Length
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 添加元素&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$a += &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 初始化空数组&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$a = @()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 删除数组元素：PowerShell不直接支持删除数组，需要重新创建&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$a = ($a[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;] $a[&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;] $a[&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 约束元素类型&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$a = [&lt;span style=&#34;color:#66d9ef&#34;&gt;int[]&lt;/span&gt;](&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 复制数组&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;Array&lt;/span&gt;]::Copy($a,$b,&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;) &lt;span style=&#34;color:#75715e&#34;&gt;# 将前2个元素从 a 复制到 b&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;负数下标&#34;&gt;负数下标&lt;/h3&gt;
+&lt;p&gt;类似Python，PowerShell接受负数下标。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 负数所以&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$arr[&lt;span style=&#34;color:#ae81ff&#34;&gt;-1&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;数组切片&#34;&gt;数组切片&lt;/h3&gt;
+&lt;p&gt;数组切片是集合中若干个元素的副本，可以通过下标运算符创建&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$arr[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;.4&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$arr[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$a[&lt;span style=&#34;color:#ae81ff&#34;&gt;-1&lt;/span&gt;..&lt;span style=&#34;color:#ae81ff&#34;&gt;-3&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$a[(&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;),(&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;)] &lt;span style=&#34;color:#75715e&#34;&gt;# 二维&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;枚举数组&#34;&gt;枚举数组&lt;/h3&gt;
+&lt;p&gt;除了使用下标，我们还可以使用&lt;code&gt;foreach&lt;/code&gt;语句来枚举数组元素。对于多维数组，使用行优先顺序。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$a = &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;53&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;16&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;-43&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;foreach&lt;/span&gt; ($elem &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; $a) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# do something with element via $e&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;foreach&lt;/span&gt; ($elem &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;-5&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;.5&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# do something with element via $e&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$a = New-Object &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;int[,]&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;foreach&lt;/span&gt; ($elem &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; $a) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# do something with element via $e&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;哈希表&#34;&gt;哈希表&lt;/h2&gt;
+&lt;p&gt;在PowerShell中，哈希表分为无序或有序两种。与数组相同，也是作为引用类型存在。&lt;/p&gt;
+&lt;h3 id=&#34;哈希表的创建&#34;&gt;哈希表的创建&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$variable_name = @{ &amp;lt;key1&amp;gt; = &amp;lt;value1&amp;gt; ; &amp;lt; key2&amp;gt; = &amp;lt;value2&amp;gt; ; ..... ; &amp;lt; keyN&amp;gt; = &amp;lt;valueN&amp;gt;;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$variable_name = [&lt;span style=&#34;color:#66d9ef&#34;&gt;ordered&lt;/span&gt;] @{ &amp;lt; key1&amp;gt; = &amp;lt;value1&amp;gt; ; &amp;lt; key2&amp;gt; = &amp;lt;value2&amp;gt; ; ..... ; &amp;lt; keyN&amp;gt; = &amp;lt;valueN&amp;gt;;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;哈希表的属性&#34;&gt;哈希表的属性&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$hash.keys
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$hash.values
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$hash.count
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;哈希表的crud&#34;&gt;哈希表的CRUD&lt;/h3&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 读、改&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$hash[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;key&amp;#34;&lt;/span&gt;] = newValue
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$hash.Key = newValue
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$hash[&lt;span style=&#34;color:#ae81ff&#34;&gt;20.5&lt;/span&gt;] = newValue
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 增&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$hash.Add(key,value)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 删&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$hash.Remove(key)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 遍历&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$hash.GetEnumerator() | Sort-Object -Property key
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 串联&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$h1 += $h2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$h1 = $h1 + $h2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;函数-1&#34;&gt;函数&lt;/h2&gt;
+&lt;h3 id=&#34;函数定义&#34;&gt;函数定义&lt;/h3&gt;
+&lt;p&gt;PowerShell的函数支持管道，还需要提供一些文档（用来响应Get-Help），还可以支持参数名在PowerShell中的自动补全。所以完整的函数定义是非常复杂的（幸运的是这些都是可选的），我们将逐步的介绍函数的定义规则。一个最简单的函数可以这样定义：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 包含关键字、函数名、参数列表、默认参数和类型定义、返回值的函数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; Get-Power ([&lt;span style=&#34;color:#66d9ef&#34;&gt;long&lt;/span&gt;]$base, [&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;]$exponent = &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# body&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; $result
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;函数属性&#34;&gt;函数属性&lt;/h3&gt;
+&lt;p&gt;可以在函数声明时指定一些属性&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 该函数在Get-Help中将显示一些帮助信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[Help(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;text&amp;#39;&lt;/span&gt;)]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; Get-Power ([&lt;span style=&#34;color:#66d9ef&#34;&gt;long&lt;/span&gt;]$base, [&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;]$exponent = &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;) {}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;筛选器函数&#34;&gt;筛选器函数&lt;/h3&gt;
+&lt;p&gt;普通函数在管道中运行一次，并通过 &lt;code&gt;$input&lt;/code&gt; 访问输入集合，而 filter 是一种特殊类型的函数，它针对输入集合中的每个对象执行一次。 当前正在处理的对象可通过变量 &lt;code&gt;$_&lt;/code&gt; 获取。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;filter&lt;/span&gt; Get-Square2 { &lt;span style=&#34;color:#75715e&#34;&gt;# make the function a filter&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    $_ * $_ &lt;span style=&#34;color:#75715e&#34;&gt;# access current object from the collection&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;-3&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;.3&lt;/span&gt; | Get-Square2 &lt;span style=&#34;color:#75715e&#34;&gt;# collection has 7 elements&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;参数绑定&#34;&gt;参数绑定&lt;/h3&gt;
+&lt;p&gt;参数绑定按如下顺序进行&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;对所有指定参数名的参数赋值&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;在没有歧义的情况下，允许使用参数的前若干个字母作为缩写，只需要满足该缩写不是参数的公共前缀即可。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;按照剩余的实参和形参顺序一一赋值&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果还有剩余参数，全部放入&lt;code&gt;$args&lt;/code&gt;变量（如果设置了对应的参数属性）&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;如果参数不足够，从管道中绑定。&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;switch类型的参数&#34;&gt;&lt;code&gt;switch&lt;/code&gt;类型的参数&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;switch&lt;/code&gt;又被称为开关参数，它的值仅有 &lt;code&gt;$true&lt;/code&gt; &lt;code&gt;$false&lt;/code&gt;两种。默认值为&lt;code&gt;$false&lt;/code&gt;。调用时只需要输入对应的参数名，就可以将其设置为&lt;code&gt;$true&lt;/code&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;参数属性&#34;&gt;参数属性&lt;/h3&gt;
+&lt;p&gt;在参数定义时可以指定一些属性。例如：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;param&lt;/span&gt; (
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    [Parameter(&lt;span style=&#34;color:#a6e22e&#34;&gt;HelpMessage&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;some text&amp;#34;&lt;/span&gt;)]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    [Alias(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;CN&amp;#34;&lt;/span&gt;)]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    [Alias(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;system&amp;#34;&lt;/span&gt;)]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    [&lt;span style=&#34;color:#66d9ef&#34;&gt;string[]&lt;/span&gt;] $ComputerName
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;上述参数定义完成了：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;设置在&lt;code&gt;Get-Help&lt;/code&gt;页面中，该参数会显示帮助信息&lt;/li&gt;
+&lt;li&gt;拥有三个参数别名&lt;/li&gt;
+&lt;li&gt;类型为&lt;code&gt;string[]&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;常见的属性及描述如下表：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;属性&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Alias: string&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;参数别名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;AllowEmptyCollection&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;允许为空集合&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;AllowEmptyString&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;允许为空字符串&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;AllowNull&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;允许为&lt;code&gt;$null&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Paramter: object&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;定义形参特征&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ValidateCount: object&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;定义接受参数数组的最小和最大个数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ValidateNotNullOrEmpty&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;定义参数不能为空字符串、空数组、&lt;code&gt;$null&lt;/code&gt;或者包含他们的集合&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;PSDefaultValue: object&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;包含帮助信息和默认值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ValidatePattern: regex_string&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;验证模式是否匹配&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ValidateRange: object&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;验证参数最小、最大值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ValidateScript: 表达式&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;使用逻辑表达式对参数进行复杂验证&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ValidateSet: object&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;验证参数是否是某个集合中的值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;（prama块属性）CmdletBinding&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;此属性在函数的“参数块”的“属性列表”中用于指示该函数的行为类似于 cmdlet 具体来说，它可以让函数使用它可让函数使用 &lt;code&gt;begin&lt;/code&gt;、&lt;code&gt;process&lt;/code&gt;和 &lt;code&gt;end&lt;/code&gt; 命名块通过 &lt;code&gt;$PsCmdlet&lt;/code&gt; 变量来访问大量方法和属性。但是定义这个属性之后，&lt;code&gt;$args&lt;/code&gt;将不会接受多于参数。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;（prama块属性）OutputType: object(type[],string[])&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;指定返回值的类型、返回类型参数集名称&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;[type]&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;定义参数类型&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;Parameter参数&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;HelpMessage: string&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;如未提供所需参数，运行时会提示用户输入参数值。 提示对话框包含 HelpMessage 文本。(如果设置了&lt;code&gt;Mandatory=$true&lt;/code&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Mandatory: bool&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;如果未提供该参数，要求PowerShell请求用户手动输入&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ParameterSetName: string&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;指定参数所属参数集名称&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Position: int&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;指定位置，从0开始。如果没有指定则必须指定名称或别名&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ValueFromPipeline: bool&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是否接受来自管道对象的输入并将对象作为唯一参数，当且仅当参数集内只有一个参数时可以设置为&lt;code&gt;$true&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ValueFromPipelineByPropertyName: bool&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是否接受来自管道对象的输入，且从管道对象的属性名来接受参数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ValueFromRemainingArguments: bool&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;是否使用&lt;code&gt;$args&lt;/code&gt;接受多余参数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;PSDefaultValue参数&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Help: string&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;在Get-Help中显示帮助信息&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;Value: object&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;指定参数默认值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;ValidateCount参数&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;MinLength:int（位置 0）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;最小数目&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;MaxLength:int（位置 1）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;最大数目&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;ValidateRange参数&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;MinRange:int（位置 0）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;最小值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;MaxRange:int（位置 1）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;最大值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;ValidateSet参数&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;用途&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;ValidValues（位置 0）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;类型：string[]有效值集。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;IgnoreCase（命名参数）&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;类型：bool；默认值：$true指定是否应忽略字符串类型的参数的大小写。&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;参数集&#34;&gt;参数集&lt;/h3&gt;
+&lt;p&gt;可编写能够针对不同方案执行不同操作的单个函数或 cmdlet。 方法是根据所需执行的操作公开相应的参数组。 此类参数分组称为“参数集”。&lt;/p&gt;
+&lt;p&gt;参数属性&lt;code&gt;Prameter.ParameterSetName&lt;/code&gt;指定形参所属的参数集。 此行为意味着每个参数集必须具有一个唯一参数，且该参数不存在于任何其他参数集中。&lt;/p&gt;
+&lt;p&gt;对于属于多个参数集的参数，请为每个参数集添加 &lt;code&gt;Parameter&lt;/code&gt; 属性。 这将允许以不同方式定义每个参数集中的参数。包含多个位置参数的参数集必须为每个参数定义唯一位置。 两个位置参数不能指定同一位置。如果某个参数未指定有参数集，则该参数属于所有参数集。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 定义了两个参数集 Computer 和 User，参数SharedParam同时属于两个参数集&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;param&lt;/span&gt; ( [Parameter(&lt;span style=&#34;color:#a6e22e&#34;&gt;Mandatory&lt;/span&gt; = $true&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ParameterSetName&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Computer&amp;#34;&lt;/span&gt;)]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;string[]&lt;/span&gt;] $ComputerName&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[Parameter(&lt;span style=&#34;color:#a6e22e&#34;&gt;Mandatory&lt;/span&gt; = $true&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ParameterSetName&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;User&amp;#34;&lt;/span&gt;)]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;string[]&lt;/span&gt;] $UserName&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[Parameter(&lt;span style=&#34;color:#a6e22e&#34;&gt;Mandatory&lt;/span&gt; = $true&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;，&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ParameterSetName&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Computer&amp;#34;&lt;/span&gt;)]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[Parameter(&lt;span style=&#34;color:#a6e22e&#34;&gt;ParameterSetName&lt;/span&gt; = &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;User&amp;#34;&lt;/span&gt;)]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;] $SharedParam = &lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt; )
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; ($PsCmdlet.&lt;span style=&#34;color:#a6e22e&#34;&gt;ParameterSetName&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-eq&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Computer&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;#处理Computer&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;elseif&lt;/span&gt; ($PsCmdlet.&lt;span style=&#34;color:#a6e22e&#34;&gt;ParameterSetName&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;-eq&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;User&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#75715e&#34;&gt;# 处理User&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;从管道获得参数&#34;&gt;从管道获得参数&lt;/h3&gt;
+&lt;p&gt;使用&lt;code&gt;$input&lt;/code&gt;可以从管道中获得参数，如下例子：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; Get-Square1 {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;foreach&lt;/span&gt; ($i &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; $input) {   &lt;span style=&#34;color:#75715e&#34;&gt;# iterate over the collection&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        $i * $i
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;-3&lt;/span&gt;.&lt;span style=&#34;color:#ae81ff&#34;&gt;.3&lt;/span&gt; | Get-Square1
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;生命周期块&#34;&gt;生命周期块&lt;/h3&gt;
+&lt;p&gt;如果函数从管道中获得参数，并且开启了&lt;code&gt;CmdletBinding&lt;/code&gt;属性，我们可以使用一些块来在其不同的生命周期执行代码。他们包括&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;code&gt;begin&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;process&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;end&lt;/code&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; Get-Square1 {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;begin&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;			echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Begin&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;process&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      $_ = $_ * $_
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;		&lt;span style=&#34;color:#66d9ef&#34;&gt;foreach&lt;/span&gt; ($i &lt;span style=&#34;color:#66d9ef&#34;&gt;in&lt;/span&gt; $input) {   &lt;span style=&#34;color:#75715e&#34;&gt;# iterate over the collection&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        echo $i
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;end&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    	echo &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;End&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;定义参数的另一种方式-param块和dynamicparam块&#34;&gt;定义参数的另一种方式-Param块和DynamicParam块&lt;/h3&gt;
+&lt;p&gt;示例代码展示了使用方法，首先定义两个静态参数，如果&lt;code&gt;$str&lt;/code&gt;参数满足条件，&lt;code&gt;QI&lt;/code&gt;参数及其默认值才是可用的。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;function&lt;/span&gt; fun {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;param&lt;/span&gt; ([&lt;span style=&#34;color:#66d9ef&#34;&gt;string&lt;/span&gt;]$str, [&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;]$start_pos = &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;DynamicParam&lt;/span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    	&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt;($srt &lt;span style=&#34;color:#f92672&#34;&gt;-eq&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;*Qisumi&amp;#34;&lt;/span&gt;){
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    		$paramDictionary.Add(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;QI&amp;#34;&lt;/span&gt;,$Default)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    		&lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; $paramDictionary
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    	}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;param块属性-outputtype&#34;&gt;Param块属性 OutputType&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;参数&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;位置0：string[]&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;返回的值类型的列表&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;其余部分：string[]&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[OutputType([&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;])] &lt;span style=&#34;color:#66d9ef&#34;&gt;param&lt;/span&gt; ( ... )
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[OutputType(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;double&amp;#34;&lt;/span&gt;)] &lt;span style=&#34;color:#66d9ef&#34;&gt;param&lt;/span&gt; ( ... )
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[OutputType(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;,&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;)] &lt;span style=&#34;color:#66d9ef&#34;&gt;param&lt;/span&gt; ( ... )
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;部分只允许在工作流中使用的块&#34;&gt;部分只允许在工作流中使用的块&lt;/h3&gt;
+&lt;p&gt;它们包括&lt;code&gt;parallel sequence inlinescipt&lt;/code&gt;，参考&lt;a href=&#34;https://learn.microsoft.com/zh-cn/powershell/scripting/lang-spec/chapter-08?view=powershell-7.2#8102-workflow-functions&#34;&gt;工作流&lt;/a&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;基于注释的帮助&#34;&gt;基于注释的帮助&lt;/h2&gt;
+&lt;p&gt;PowerShell 为程序员提供了一种机制，可以使用特殊的注释指令来记录其脚本。 使用此类语法的注释称为帮助注释&lt;code&gt;Get-Help&lt;/code&gt;从这些指令生成文档。&lt;/p&gt;
+&lt;h3 id=&#34;简介&#34;&gt;简介&lt;/h3&gt;
+&lt;p&gt;帮助注释包含格式为 .name 的帮助指令，后跟一行或多行帮助内容文本 。&lt;/p&gt;
+&lt;p&gt;帮助主题中的所有行都必须是连续的。 如果帮助主题前面的注释不属于该主题，则两者之间必须至少有一个空白行。指令可以按任意顺序显示，并且某些指令可能会多次出现。记录函数时，帮助主题可能出现在以下三个位置之一：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;紧接在函数定义之前，在函数帮助的最后一行与包含函数语句的行之间不超过一个空白行。&lt;/li&gt;
+&lt;li&gt;紧接在左大括号之后的函数体内。&lt;/li&gt;
+&lt;li&gt;紧接在右大括号之前的函数体内。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;记录脚本文件时，帮助主题可能出现在以下两个位置之一：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在脚本文件的开头，可以只在前面加上注释和空白行。 如果帮助后脚本的第一项是函数定义，则脚本帮助的末尾和该函数声明之间必须至少有两个空白行。 否则，帮助将被解释为应用于函数而非脚本文件。&lt;/li&gt;
+&lt;li&gt;在脚本文件的末尾。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-powershell&#34; data-lang=&#34;powershell&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;#
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;help-directive-1&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;help-content-1&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;...
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;help-directive-n&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;help-content-n&amp;gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&amp;lt;#
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;.&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;DESCRIPTION&lt;/span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;Computes Base to the power Exponent. Supports non-negative integer
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;powers only.
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#&amp;gt;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;帮助命令&#34;&gt;帮助命令&lt;/h3&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;命令名&lt;/th&gt;
+&lt;th style=&#34;text-align:center&#34;&gt;描述&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;.DESCRIPTION&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;详细描述，只能使用一次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;.SYNOPSIS&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;简要描述，只能使用一次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;.EXAMPLE&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;用法示例&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;.INPUTS&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;描述管道传输到脚本或函数的对象&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;.LINK&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;指定一个http(s)起始的URL，使用Get-Help -Online时会打开这个页面&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;.NOTES&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;其他帮助信息，只能使用一次&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;.OUTPUTS&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;描述输出对象&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;.PARAMETER Parameter-Name&lt;/td&gt;
+&lt;td style=&#34;text-align:center&#34;&gt;描述给定参数&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;div class=&#34;footnotes&#34; role=&#34;doc-endnotes&#34;&gt;
+&lt;hr&gt;
+&lt;ol&gt;
+&lt;li id=&#34;fn:1&#34;&gt;
+&lt;p&gt;函数签名：函数名称、参数数量、参数类型统一构成了函数签名&amp;#160;&lt;a href=&#34;#fnref:1&#34; class=&#34;footnote-backref&#34; role=&#34;doc-backlink&#34;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/div&gt;
+</description>
+      
+    </item>
     
   </channel>
 </rss>

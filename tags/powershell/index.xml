@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>PowerShell on Qisumi</title>
+    <link>https://qisumi.github.io/tags/powershell/</link>
+    <description>Recent content in PowerShell on Qisumi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>Qisumi</copyright>
+    <lastBuildDate>Wed, 25 Jan 2023 21:42:00 +0800</lastBuildDate><atom:link href="https://qisumi.github.io/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PowerShell CheatSheet</title>
+      <link>https://qisumi.github.io/post/cmdletcheatsheet/</link>
+      <pubDate>Wed, 25 Jan 2023 21:42:00 +0800</pubDate>
+      
+      <guid>https://qisumi.github.io/post/cmdletcheatsheet/</guid>
+      <description>cmdlet(alias) Description #(&amp;lt;#&amp;hellip;#&amp;gt;) 单行注释/ Set-ExecutionPolicy Unrestricted 设置脚本执行策略为不限制 Get-Help(man) 查询帮助文档 Get-Alias(gal) 查询cmdlet别名 Set-Alias 新增或设置别名 New-Alias 创建别名 Export-Alias 导出别名 Clear-Host(clear) 清空终端 Write-Host 向终端写入输</description>
+    </item>
+    
+    <item>
+      <title>PowerShell 使用简明笔记</title>
+      <link>https://qisumi.github.io/post/howtousepowershell/</link>
+      <pubDate>Wed, 25 Jan 2023 21:42:00 +0800</pubDate>
+      
+      <guid>https://qisumi.github.io/post/howtousepowershell/</guid>
+      <description>Getting Started 安装和下载 PowerShell3.0集成在了所有的Windows10以上系统中。该文档也是基于Powershell3.0的。但仍然建议安</description>
+    </item>
+    
+  </channel>
+</rss>
