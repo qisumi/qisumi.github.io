@@ -58,6 +58,8 @@
 
 
 
+<link rel="stylesheet" href="/css/prism.css">
+
 
 <meta property="og:title" content="PowerShell 使用简明笔记" />
 <meta property="og:description" content="Getting Started 安装和下载 PowerShell3.0集成在了所有的Windows10以上系统中。该文档也是基于Powershell3.0的。但仍然建议安" />
@@ -523,31 +525,31 @@
 <p>实际上<code>mkdir</code>等Linux命令在PS的支持是通过别名来实现的，我们可以给一个很长的命令起一个别名。使用   <code>*-Alias</code>系列命令可以查看、增加、修改和删除别名。</p>
 <h2 id="使用get-help和get-command命令">使用Get-Help和Get-Command命令</h2>
 <p><code>Get-Help</code>是最重要的命令，因为他可以帮助我们获得一个命令的帮助。一般我们使用这两种命令。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 获得基本帮助，会输出下图信息</span>
-</span></span><span style="display:flex;"><span>Get-Help Set-Location
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 查看使用例子，在下一小节展示</span>
-</span></span><span style="display:flex;"><span>Get-Help Set-Location -Example
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># 获得基本帮助，会输出下图信息</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Get-Help</span> <span class="nb">Set-Location</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 查看使用例子，在下一小节展示</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Get-Help</span> <span class="nb">Set-Location</span> <span class="n">-Example</span>
 </span></span></code></pre></div><!-- raw HTML omitted -->
 <p><code>Get-Command</code>命令用来帮助我们发现我们可能需要但还不知道的命令。由于Cmdlet的特殊形式，我们可能会启发式的猜测我们所需要命令的名字。例如我们知道<code>Set-Location</code>相当于<code>cd</code>，那么<code>pwd</code>命令应当可能是<code>Get-Location</code>。不论如何，他至少应该是<code>*-Location</code>的形式，那么我们查找一并获得如下输出下。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Command *-Location
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>CommandType     Name                       Version    Source
-</span></span><span style="display:flex;"><span>-----------     ----                       -------    ------
-</span></span><span style="display:flex;"><span>Cmdlet          Get-Location               <span style="color:#ae81ff">7.0</span>.0.0    Microsoft.PowerShell.Management
-</span></span><span style="display:flex;"><span>Cmdlet          Pop-Location               <span style="color:#ae81ff">7.0</span>.0.0    Microsoft.PowerShell.Management
-</span></span><span style="display:flex;"><span>Cmdlet          Push-Location              <span style="color:#ae81ff">7.0</span>.0.0    Microsoft.PowerShell.Management
-</span></span><span style="display:flex;"><span>Cmdlet          Set-Location               <span style="color:#ae81ff">7.0</span>.0.0    Microsoft.PowerShell.Management
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Get-Command</span> <span class="p">*</span><span class="n">-Location</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">CommandType</span>     <span class="n">Name</span>                       <span class="n">Version</span>    <span class="n">Source</span>
+</span></span><span class="line"><span class="cl"><span class="p">-----------</span>     <span class="p">----</span>                       <span class="p">-------</span>    <span class="p">------</span>
+</span></span><span class="line"><span class="cl"><span class="n">Cmdlet</span>          <span class="nb">Get-Location</span>               <span class="mf">7.0</span><span class="p">.</span><span class="py">0</span><span class="p">.</span><span class="py">0</span>    <span class="n">Microsoft</span><span class="p">.</span><span class="py">PowerShell</span><span class="p">.</span><span class="py">Management</span>
+</span></span><span class="line"><span class="cl"><span class="n">Cmdlet</span>          <span class="nb">Pop-Location</span>               <span class="mf">7.0</span><span class="p">.</span><span class="py">0</span><span class="p">.</span><span class="py">0</span>    <span class="n">Microsoft</span><span class="p">.</span><span class="py">PowerShell</span><span class="p">.</span><span class="py">Management</span>
+</span></span><span class="line"><span class="cl"><span class="n">Cmdlet</span>          <span class="nb">Push-Location</span>              <span class="mf">7.0</span><span class="p">.</span><span class="py">0</span><span class="p">.</span><span class="py">0</span>    <span class="n">Microsoft</span><span class="p">.</span><span class="py">PowerShell</span><span class="p">.</span><span class="py">Management</span>
+</span></span><span class="line"><span class="cl"><span class="n">Cmdlet</span>          <span class="nb">Set-Location</span>               <span class="mf">7.0</span><span class="p">.</span><span class="py">0</span><span class="p">.</span><span class="py">0</span>    <span class="n">Microsoft</span><span class="p">.</span><span class="py">PowerShell</span><span class="p">.</span><span class="py">Management</span>
 </span></span></code></pre></div><p>不难猜测<code>Get-Location</code>是我们所需要的命令，那他具体如何使用的？使用<code>Get-Help</code>。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Help Get-Location -Example
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Get-Help</span> <span class="nb">Get-Location</span> <span class="n">-Example</span>
 </span></span></code></pre></div><!-- raw HTML omitted -->
 <p>这样我们就知道了这条命令使用的基本方法（这里有很多例子，但我只截图了最简单的一个）。</p>
 <h2 id="按顺序运行多个命令">按顺序运行多个命令</h2>
 <p>使用<code>;</code>分割多个命令</p>
 <h2 id="使用管道组合多个命令">使用管道组合多个命令</h2>
 <p>多个使用<code>|</code>分割的命令序列称为管道，管道从上一条命令获得输出，并作为输入传输给下一条命令。下面有一个例子。这个例子中首先使用<code>Get-Location</code>获得当前路径对象，通过管道传输给<code>ls</code>命令。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Location | ls
-</span></span></code></pre></div><p><img src="http://blogoss.qisumi.cn/image-20230114134323256.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Get-Location</span> <span class="p">|</span> <span class="nb">ls
+</span></span></span></code></pre></div><p><img src="http://blogoss.qisumi.cn/image-20230114134323256.png" alt=""></p>
 <h2 id="powershell基于对象">Powershell基于对象</h2>
 <p>从之前的图中我们不难看出，大多数命令的输出都是二维表格的形式，实际上这是一系列对象。表格的表头是对象的属性。对于<code>ls</code>的输出可以这样理解。<code>ls</code>输出一系列<strong>文件对象</strong>。这些对象拥有(<code>Mode, LastWriteTime, Length Name</code>)这些<strong>属性</strong>。在管道中传输的也是对象。这样做的好处是数据在传输到下一条命令时可以提前校验格式，还可以避免解析字符串带来的性能开销。</p>
 <h2 id="powershell大小写不敏感">Powershell大小写不敏感</h2>
@@ -556,16 +558,16 @@
 <p>Powershell支持输出重定向运算符<code>&gt;</code> <code>&gt;&gt;</code>。但是不支持输入重定向。但是我们总是可以使用 <code>Get-Content |</code>来代替输入重定向，即先获取文件的内容，再通过管道传输给下一条命令。</p>
 <h2 id="对输出进行处理">对输出进行处理</h2>
 <p>我们现在已经知道，PS是基于对象的。那么在这种情况下，我们对输出进行处理，往往使用<code>*-Object</code>系列命令。如下有几个简单的例子。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 给输出按照修改时间属性排序</span>
-</span></span><span style="display:flex;"><span>ls | Sort-Object -Property LastWriteTime
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 给输出去重</span>
-</span></span><span style="display:flex;"><span>ls | Sort-Object -Unique
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 按照条件过滤输出，这里选择Length属性大于100的</span>
-</span></span><span style="display:flex;"><span>ls | Where-Object -Property Length <span style="color:#f92672">-ge</span> <span style="color:#ae81ff">100</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 查看输出了多少条记录, 相当于Linux中的 wc -l</span>
-</span></span><span style="display:flex;"><span>ls | Measure-Object
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># 给输出按照修改时间属性排序</span>
+</span></span><span class="line"><span class="cl"><span class="nb">ls </span><span class="p">|</span> <span class="nb">Sort-Object</span> <span class="n">-Property</span> <span class="n">LastWriteTime</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 给输出去重</span>
+</span></span><span class="line"><span class="cl"><span class="nb">ls </span><span class="p">|</span> <span class="nb">Sort-Object</span> <span class="n">-Unique</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 按照条件过滤输出，这里选择Length属性大于100的</span>
+</span></span><span class="line"><span class="cl"><span class="nb">ls </span><span class="p">|</span> <span class="nb">Where-Object</span> <span class="n">-Property</span> <span class="n">Length</span> <span class="o">-ge</span> <span class="mf">100</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 查看输出了多少条记录, 相当于Linux中的 wc -l</span>
+</span></span><span class="line"><span class="cl"><span class="nb">ls </span><span class="p">|</span> <span class="nb">Measure-Object</span>
 </span></span></code></pre></div><h2 id="使用脚本">使用脚本</h2>
 <p>PS脚本以<code>.ps1</code>为后缀，PS脚本的写法除了可以使用PS命令之外，和正常的编程语言大致相同。可以参考<strong>Docs</strong>部分详细了解。这里介绍一些最简单的特征。</p>
 <h3 id="使用方法">使用方法</h3>
@@ -933,27 +935,27 @@
 </blockquote>
 <h3 id="调用表达式">调用表达式</h3>
 <p>调用表达式通过<code>.</code>或者<code>::</code>来完成。例如</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>[<span style="color:#66d9ef">math</span>]::Sqrt(<span style="color:#ae81ff">2.0</span>)
-</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">char</span>]::IsUpper(<span style="color:#e6db74">&#34;a&#34;</span>)
-</span></span><span style="display:flex;"><span>$b.ToUpper()
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">[</span><span class="no">math</span><span class="p">]::</span><span class="n">Sqrt</span><span class="p">(</span><span class="mf">2.0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="no">char</span><span class="p">]::</span><span class="n">IsUpper</span><span class="p">(</span><span class="s2">&#34;a&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$b</span><span class="p">.</span><span class="py">ToUpper</span><span class="p">()</span>
 </span></span></code></pre></div><blockquote>
 <p>这里有一种特殊的语法，<code>[math]::Sqrt</code> 这实际上是因为PowerShell受<code>.Net</code>支持，所以也可以使用<code>.Net</code>中的很多特性。</p>
 </blockquote>
 <h3 id="表达式-1">$(&hellip;)表达式</h3>
 <p>对内部语句列表（使用<code>;</code>分割）分别求值，如果得到单个元素，则结果为该元素。没有结果则为 <code>$null</code>。否则则为对象数组。并将结果作为一个对象数组写入管道。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$j = <span style="color:#ae81ff">20</span>
-</span></span><span style="display:flex;"><span>$($i = <span style="color:#ae81ff">10</span>) <span style="color:#75715e"># pipeline gets nothing</span>
-</span></span><span style="display:flex;"><span>$(($i = <span style="color:#ae81ff">10</span>)) <span style="color:#75715e"># pipeline gets int 10</span>
-</span></span><span style="display:flex;"><span>$($i = <span style="color:#ae81ff">10</span>; $j) <span style="color:#75715e"># pipeline gets int 20</span>
-</span></span><span style="display:flex;"><span>$(($i = <span style="color:#ae81ff">10</span>); $j) <span style="color:#75715e"># pipeline gets [object[]](10,20)</span>
-</span></span><span style="display:flex;"><span>$(($i = <span style="color:#ae81ff">10</span>); ++$j) <span style="color:#75715e"># pipeline gets int 10</span>
-</span></span><span style="display:flex;"><span>$(($i = <span style="color:#ae81ff">10</span>); (++$j)) <span style="color:#75715e"># pipeline gets [object[]](10,22)</span>
-</span></span><span style="display:flex;"><span>$($i = <span style="color:#ae81ff">10</span>; ++$j) <span style="color:#75715e"># pipeline gets nothing</span>
-</span></span><span style="display:flex;"><span>$(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">6</span>) <span style="color:#75715e"># pipeline gets [object[]](2,4,6)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>$a = @(<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">6</span>)          <span style="color:#75715e"># result is array of 3</span>
-</span></span><span style="display:flex;"><span>@($a)                  <span style="color:#75715e"># result is the same array of 3</span>
-</span></span><span style="display:flex;"><span>@(@($a))               <span style="color:#75715e"># result is the same array of 3</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$j</span> <span class="p">=</span> <span class="mf">20</span>
+</span></span><span class="line"><span class="cl"><span class="vm">$</span><span class="p">(</span><span class="nv">$i</span> <span class="p">=</span> <span class="mf">10</span><span class="p">)</span> <span class="c"># pipeline gets nothing</span>
+</span></span><span class="line"><span class="cl"><span class="vm">$</span><span class="p">((</span><span class="nv">$i</span> <span class="p">=</span> <span class="mf">10</span><span class="p">))</span> <span class="c"># pipeline gets int 10</span>
+</span></span><span class="line"><span class="cl"><span class="vm">$</span><span class="p">(</span><span class="nv">$i</span> <span class="p">=</span> <span class="mf">10</span><span class="p">;</span> <span class="nv">$j</span><span class="p">)</span> <span class="c"># pipeline gets int 20</span>
+</span></span><span class="line"><span class="cl"><span class="vm">$</span><span class="p">((</span><span class="nv">$i</span> <span class="p">=</span> <span class="mf">10</span><span class="p">);</span> <span class="nv">$j</span><span class="p">)</span> <span class="c"># pipeline gets [object[]](10,20)</span>
+</span></span><span class="line"><span class="cl"><span class="vm">$</span><span class="p">((</span><span class="nv">$i</span> <span class="p">=</span> <span class="mf">10</span><span class="p">);</span> <span class="p">++</span><span class="nv">$j</span><span class="p">)</span> <span class="c"># pipeline gets int 10</span>
+</span></span><span class="line"><span class="cl"><span class="vm">$</span><span class="p">((</span><span class="nv">$i</span> <span class="p">=</span> <span class="mf">10</span><span class="p">);</span> <span class="p">(++</span><span class="nv">$j</span><span class="p">))</span> <span class="c"># pipeline gets [object[]](10,22)</span>
+</span></span><span class="line"><span class="cl"><span class="vm">$</span><span class="p">(</span><span class="nv">$i</span> <span class="p">=</span> <span class="mf">10</span><span class="p">;</span> <span class="p">++</span><span class="nv">$j</span><span class="p">)</span> <span class="c"># pipeline gets nothing</span>
+</span></span><span class="line"><span class="cl"><span class="vm">$</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="mf">6</span><span class="p">)</span> <span class="c"># pipeline gets [object[]](2,4,6)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$a</span> <span class="p">=</span> <span class="vm">@</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="mf">6</span><span class="p">)</span>          <span class="c"># result is array of 3</span>
+</span></span><span class="line"><span class="cl"><span class="vm">@</span><span class="p">(</span><span class="nv">$a</span><span class="p">)</span>                  <span class="c"># result is the same array of 3</span>
+</span></span><span class="line"><span class="cl"><span class="vm">@</span><span class="p">(</span><span class="vm">@</span><span class="p">(</span><span class="nv">$a</span><span class="p">))</span>               <span class="c"># result is the same array of 3</span>
 </span></span></code></pre></div><h3 id="表达式-2">@(&hellip;)表达式</h3>
 <p>与<code>$(,,,)</code>表达式类似。区别在于，在没有值时，<code>@(...)</code>会得到一个空数组，而<code>$(...)</code>会得到<code>$null</code>.</p>
 <h3 id="表达式-3">@{&hellip;}表达式</h3>
@@ -970,9 +972,9 @@
 </ol>
 <p>对于重名的命令，也按照上述顺序（优先级）进行查找。</p>
 <p>对于命令调用，也有另外一种方式，它允许我们使用字符串来调用。这样我们就可以把命令储存到变量中，例如以下三种调用是等价的。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Factorial <span style="color:#ae81ff">5</span>
-</span></span><span style="display:flex;"><span>&amp; Get-Factorial <span style="color:#ae81ff">5</span>
-</span></span><span style="display:flex;"><span>&amp; <span style="color:#e6db74">&#34;Get-Factorial&#34;</span> <span style="color:#ae81ff">5</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Get-Factorial</span> <span class="mf">5</span>
+</span></span><span class="line"><span class="cl"><span class="p">&amp;</span> <span class="nb">Get-Factorial</span> <span class="mf">5</span>
+</span></span><span class="line"><span class="cl"><span class="p">&amp;</span> <span class="s2">&#34;Get-Factorial&#34;</span> <span class="mf">5</span>
 </span></span></code></pre></div><blockquote>
 <p>和大多数编程语言类似，如果一个命令是函数，那么它支持直接或间接的 **递归 **调用</p>
 </blockquote>
@@ -981,8 +983,8 @@
 <ul>
 <li>
 <p>开关参数：参数的类型为布尔值。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Set-MyProcess -Strict
-</span></span><span style="display:flex;"><span>Set-MyProcess -Strict: $true
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Set-MyProcess</span> <span class="n">-Strict</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Set-MyProcess</span> <span class="n">-Strict:</span> <span class="vm">$true</span>
 </span></span></code></pre></div></li>
 <li>
 <p>普通参数</p>
@@ -991,7 +993,7 @@ Get-Power -exponent 3 -base 5
 </code></pre></li>
 <li>
 <p>位置参数</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>Get-Power <span style="color:#ae81ff">5</span> <span style="color:#ae81ff">3</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nb">Get-Power</span> <span class="mf">5</span> <span class="mf">3</span>
 </span></span></code></pre></div></li>
 <li>
 <p><a href="https://learn.microsoft.com/zh-cn/powershell/module/microsoft.powershell.core/about/about_commonparameters">通用参数</a>：指可以和任何 cmdlet 一起使用的参数。</p>
@@ -1017,78 +1019,78 @@ Get-Power -exponent 3 -base 5
 <h2 id="字符串">字符串</h2>
 <p>Powershell中的字符串可以由单引号或双引号定义。他们都是<code>System.String</code>对象（来自<code>.Net</code>平台）。</p>
 <h3 id="字符串常用操作">字符串常用操作</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 串联的三种方法</span>
-</span></span><span style="display:flex;"><span>$s1+$s2
-</span></span><span style="display:flex;"><span>$s1,$s2 -join <span style="color:#e6db74">&#34;.COM&#34;</span> <span style="color:#75715e"># 输出{$s1}.COM{$s2}</span>
-</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">System.String</span>]::Concat($s1,$s2)
-</span></span><span style="display:flex;"><span><span style="color:#75715e">#子串</span>
-</span></span><span style="display:flex;"><span>$s.SubString(<span style="color:#66d9ef">begin</span>,len)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 格式化内插</span>
-</span></span><span style="display:flex;"><span>$s = <span style="color:#e6db74">&#34;{0:n2,10} {1:p1,-10}&#34;</span> <span style="color:#f92672">-f</span> $s1,$s2 <span style="color:#75715e"># :n2表示保留2位小数 :p1先保留小数点后一位再转换为百分数，,10 ,-10表示向右(左)对齐并补足10位。</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 替换</span>
-</span></span><span style="display:flex;"><span>$s.Replace(s1,s2) 
-</span></span><span style="display:flex;"><span>$s <span style="color:#f92672">-replace</span> s1,s2 <span style="color:#75715e"># 大小写不敏感，使用creplace则大小写敏感</span>
-</span></span><span style="display:flex;"><span>$s <span style="color:#f92672">-creplace</span> s1,s2
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 包含</span>
-</span></span><span style="display:flex;"><span>$s. <span style="color:#f92672">-match</span> $s1 <span style="color:#75715e"># 大小写不敏感, 使用cmatch则大小写敏感</span>
-</span></span><span style="display:flex;"><span>$s.Contains($s1) <span style="color:#75715e"># 大小写敏感</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 过滤器</span>
-</span></span><span style="display:flex;"><span>$s <span style="color:#f92672">-like</span> <span style="color:#e6db74">&#34;3.14*&#34;</span> <span style="color:#75715e"># -like支持通配符</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 分割</span>
-</span></span><span style="display:flex;"><span>$s.Split($s1,[<span style="color:#66d9ef">StringSplitOptions</span>]::RemoveEmptyEntries) <span style="color:#75715e"># 指定删除空的切割结果</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 比较</span>
-</span></span><span style="display:flex;"><span>$s1.CompareTo($s1)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 长度</span>
-</span></span><span style="display:flex;"><span>$s.Length
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 插入</span>
-</span></span><span style="display:flex;"><span>$s.Insert(<span style="color:#66d9ef">begin</span>, $s1)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 删除</span>
-</span></span><span style="display:flex;"><span>$s.Remove(<span style="color:#66d9ef">begin</span>, length)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># join</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;10&#34;</span>,<span style="color:#e6db74">&#34;20&#34;</span>,<span style="color:#e6db74">&#34;30&#34;</span> -join(<span style="color:#e6db74">&#34;,&#34;</span>) <span style="color:#75715e"># 10,20,30</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># 串联的三种方法</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$s1</span><span class="p">+</span><span class="nv">$s2</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$s1</span><span class="p">,</span><span class="nv">$s2</span> <span class="n">-join</span> <span class="s2">&#34;.COM&#34;</span> <span class="c"># 输出{$s1}.COM{$s2}</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="no">System.String</span><span class="p">]::</span><span class="n">Concat</span><span class="p">(</span><span class="nv">$s1</span><span class="p">,</span><span class="nv">$s2</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c">#子串</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$s</span><span class="p">.</span><span class="py">SubString</span><span class="p">(</span><span class="k">begin</span><span class="p">,</span><span class="n">len</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 格式化内插</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$s</span> <span class="p">=</span> <span class="s2">&#34;{0:n2,10} {1:p1,-10}&#34;</span> <span class="o">-f</span> <span class="nv">$s1</span><span class="p">,</span><span class="nv">$s2</span> <span class="c"># :n2表示保留2位小数 :p1先保留小数点后一位再转换为百分数，,10 ,-10表示向右(左)对齐并补足10位。</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 替换</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$s</span><span class="p">.</span><span class="py">Replace</span><span class="p">(</span><span class="n">s1</span><span class="p">,</span><span class="n">s2</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl"><span class="nv">$s</span> <span class="o">-replace</span> <span class="n">s1</span><span class="p">,</span><span class="n">s2</span> <span class="c"># 大小写不敏感，使用creplace则大小写敏感</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$s</span> <span class="o">-creplace</span> <span class="n">s1</span><span class="p">,</span><span class="n">s2</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 包含</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$s</span><span class="p">.</span> <span class="o">-match</span> <span class="nv">$s1</span> <span class="c"># 大小写不敏感, 使用cmatch则大小写敏感</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$s</span><span class="p">.</span><span class="py">Contains</span><span class="p">(</span><span class="nv">$s1</span><span class="p">)</span> <span class="c"># 大小写敏感</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 过滤器</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$s</span> <span class="o">-like</span> <span class="s2">&#34;3.14*&#34;</span> <span class="c"># -like支持通配符</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 分割</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$s</span><span class="p">.</span><span class="py">Split</span><span class="p">(</span><span class="nv">$s1</span><span class="p">,[</span><span class="no">StringSplitOptions</span><span class="p">]::</span><span class="n">RemoveEmptyEntries</span><span class="p">)</span> <span class="c"># 指定删除空的切割结果</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 比较</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$s1</span><span class="p">.</span><span class="py">CompareTo</span><span class="p">(</span><span class="nv">$s1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 长度</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$s</span><span class="p">.</span><span class="py">Length</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 插入</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$s</span><span class="p">.</span><span class="py">Insert</span><span class="p">(</span><span class="k">begin</span><span class="p">,</span> <span class="nv">$s1</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 删除</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$s</span><span class="p">.</span><span class="py">Remove</span><span class="p">(</span><span class="k">begin</span><span class="p">,</span> <span class="n">length</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c"># join</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;10&#34;</span><span class="p">,</span><span class="s2">&#34;20&#34;</span><span class="p">,</span><span class="s2">&#34;30&#34;</span> <span class="n">-join</span><span class="p">(</span><span class="s2">&#34;,&#34;</span><span class="p">)</span> <span class="c"># 10,20,30</span>
 </span></span></code></pre></div><h3 id="字符串格式化">字符串格式化</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 字符串格式化的详细规则</span>
-</span></span><span style="display:flex;"><span>`$i` = <span style="color:#ae81ff">10</span>; $j = <span style="color:#ae81ff">12</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;{2} &lt;= {0} + {1}\</span><span style="color:#ae81ff">`n</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">-f</span> $i,$j,($i+$j)  <span style="color:#75715e"># 22 &lt;= 10 + 12</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&gt;{0,3}&lt;&#34;</span> <span style="color:#f92672">-f</span> <span style="color:#ae81ff">5</span>                          <span style="color:#75715e"># &gt; 5&lt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&gt;{0,-3}&lt;&#34;</span> <span style="color:#f92672">-f</span> <span style="color:#ae81ff">5</span>                         <span style="color:#75715e"># &gt;5 &lt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&gt;{0,3:000}&lt;&#34;</span> <span style="color:#f92672">-f</span> <span style="color:#ae81ff">5</span>                      <span style="color:#75715e"># &gt;005&lt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&gt;{0,5:0.00}&lt;&#34;</span> <span style="color:#f92672">-f</span> <span style="color:#ae81ff">5.0</span>                   <span style="color:#75715e"># &gt; 5.00&lt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&gt;{0:C}&lt;&#34;</span> <span style="color:#f92672">-f</span> <span style="color:#ae81ff">1234567.888</span>                <span style="color:#75715e"># &gt;$1,234,567.89&lt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&gt;{0:C}&lt;&#34;</span> <span style="color:#f92672">-f</span> <span style="color:#ae81ff">-1234.56</span>                   <span style="color:#75715e"># &gt;($1,234.56)&lt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&gt;{0,12:e2}&lt;&#34;</span> <span style="color:#f92672">-f</span> <span style="color:#ae81ff">123.456e2</span>              <span style="color:#75715e"># &gt; 1.23e+004&lt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#34;&gt;{0,-12:p}&lt;&#34;</span> <span style="color:#f92672">-f</span> <span style="color:#ae81ff">-0.252</span>                 <span style="color:#75715e"># &gt;-25.20 % &lt;</span>
-</span></span><span style="display:flex;"><span>$format = <span style="color:#e6db74">&#34;&gt;{0:x8}&lt;&#34;</span>
-</span></span><span style="display:flex;"><span>$format <span style="color:#f92672">-f</span> <span style="color:#ae81ff">123455</span>                       <span style="color:#75715e"># &gt;0001e23f&lt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># 字符串格式化的详细规则</span>
+</span></span><span class="line"><span class="cl"><span class="p">`$</span><span class="n">i</span><span class="p">`</span> <span class="p">=</span> <span class="mf">10</span><span class="p">;</span> <span class="nv">$j</span> <span class="p">=</span> <span class="mf">12</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;{2} &lt;= {0} + {1}\</span><span class="se">`n</span><span class="s2">&#34;</span> <span class="o">-f</span> <span class="nv">$i</span><span class="p">,</span><span class="nv">$j</span><span class="p">,(</span><span class="nv">$i</span><span class="p">+</span><span class="nv">$j</span><span class="p">)</span>  <span class="c"># 22 &lt;= 10 + 12</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&gt;{0,3}&lt;&#34;</span> <span class="o">-f</span> <span class="mf">5</span>                          <span class="c"># &gt; 5&lt;</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&gt;{0,-3}&lt;&#34;</span> <span class="o">-f</span> <span class="mf">5</span>                         <span class="c"># &gt;5 &lt;</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&gt;{0,3:000}&lt;&#34;</span> <span class="o">-f</span> <span class="mf">5</span>                      <span class="c"># &gt;005&lt;</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&gt;{0,5:0.00}&lt;&#34;</span> <span class="o">-f</span> <span class="mf">5.0</span>                   <span class="c"># &gt; 5.00&lt;</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&gt;{0:C}&lt;&#34;</span> <span class="o">-f</span> <span class="mf">1234567.888</span>                <span class="c"># &gt;$1,234,567.89&lt;</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&gt;{0:C}&lt;&#34;</span> <span class="o">-f</span> <span class="mf">-1234.56</span>                   <span class="c"># &gt;($1,234.56)&lt;</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&gt;{0,12:e2}&lt;&#34;</span> <span class="o">-f</span> <span class="mf">123.456e2</span>              <span class="c"># &gt; 1.23e+004&lt;</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;&gt;{0,-12:p}&lt;&#34;</span> <span class="o">-f</span> <span class="mf">-0.252</span>                 <span class="c"># &gt;-25.20 % &lt;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$format</span> <span class="p">=</span> <span class="s2">&#34;&gt;{0:x8}&lt;&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$format</span> <span class="o">-f</span> <span class="mf">123455</span>                       <span class="c"># &gt;0001e23f&lt;</span>
 </span></span></code></pre></div><h2 id="语句">语句</h2>
 <h3 id="语句块">语句块</h3>
 <p>和<code>C/C++</code> <code>JAVA</code>类似，PowerShell使用<code>{...}</code>来表示语句块，一个语句块内可以有若干语句。类似<code>JavaScript</code>，PowerShell不强制使用<code>;</code>作为语句分隔符。</p>
 <h3 id="语句的值">语句的值</h3>
 <p>语句的值是它写入管道的一组累计值。 如果语句写入一个标量值，则该值是语句的值。 如果语句写入多个值，则该语句的值是一组按写入顺序存储在不受约束的一维数组的元素中的值。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 循环没有迭代，也没有向管道写入任何内容。 语句的值为 $null。</span>
-</span></span><span style="display:flex;"><span>$v = <span style="color:#66d9ef">for</span> ($i = <span style="color:#ae81ff">10</span>; $i <span style="color:#f92672">-le</span> <span style="color:#ae81ff">5</span>; ++$i) { }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 循环迭代了五次，但没有向管道写入任何内容。 语句的值为 $null。</span>
-</span></span><span style="display:flex;"><span>$v = <span style="color:#66d9ef">for</span> ($i = <span style="color:#ae81ff">1</span>; $i <span style="color:#f92672">-le</span> <span style="color:#ae81ff">5</span>; ++$i) { }
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 循环迭代了五次，每次向管道写入 int 值 $i。 语句的值是值为 Length 5 的 object[]。</span>
-</span></span><span style="display:flex;"><span>$v = <span style="color:#66d9ef">for</span> ($i = <span style="color:#ae81ff">1</span>; $i <span style="color:#f92672">-le</span> <span style="color:#ae81ff">5</span>; ++$i) { $i }
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># 循环没有迭代，也没有向管道写入任何内容。 语句的值为 $null。</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$v</span> <span class="p">=</span> <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="p">=</span> <span class="mf">10</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">-le</span> <span class="mf">5</span><span class="p">;</span> <span class="p">++</span><span class="nv">$i</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 循环迭代了五次，但没有向管道写入任何内容。 语句的值为 $null。</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$v</span> <span class="p">=</span> <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="p">=</span> <span class="mf">1</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">-le</span> <span class="mf">5</span><span class="p">;</span> <span class="p">++</span><span class="nv">$i</span><span class="p">)</span> <span class="p">{</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c"># 循环迭代了五次，每次向管道写入 int 值 $i。 语句的值是值为 Length 5 的 object[]。</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$v</span> <span class="p">=</span> <span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="p">=</span> <span class="mf">1</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">-le</span> <span class="mf">5</span><span class="p">;</span> <span class="p">++</span><span class="nv">$i</span><span class="p">)</span> <span class="p">{</span> <span class="nv">$i</span> <span class="p">}</span>
 </span></span></code></pre></div><h3 id="标记语句">标记语句</h3>
 <p>和大多数编程编程语言不同的是，PowerShell的<code>break/continue</code>可以根据标记跳出若干层循环。这是一个非常好的特性。就像下面这样使用：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">:</span>go_here <span style="color:#66d9ef">while</span> ($j <span style="color:#f92672">-le</span> <span style="color:#ae81ff">100</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># ...</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">:</span>labelA
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> ($i = <span style="color:#ae81ff">1</span>; $i <span style="color:#f92672">-le</span> <span style="color:#ae81ff">5</span>; ++$i) {
-</span></span><span style="display:flex;"><span>    <span style="color:#960050;background-color:#1e0010">:</span>labelB
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> ($j = <span style="color:#ae81ff">1</span>; $j <span style="color:#f92672">-le</span> <span style="color:#ae81ff">3</span>; ++$j) {
-</span></span><span style="display:flex;"><span>        <span style="color:#960050;background-color:#1e0010">:</span>labelC
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> ($k = <span style="color:#ae81ff">1</span>; $k <span style="color:#f92672">-le</span> <span style="color:#ae81ff">2</span>; ++$k) {
-</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># ...</span>
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="err">:</span><span class="n">go_here</span> <span class="k">while</span> <span class="p">(</span><span class="nv">$j</span> <span class="o">-le</span> <span class="mf">100</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># ...</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">:</span><span class="n">labelA</span>
+</span></span><span class="line"><span class="cl"><span class="k">for</span> <span class="p">(</span><span class="nv">$i</span> <span class="p">=</span> <span class="mf">1</span><span class="p">;</span> <span class="nv">$i</span> <span class="o">-le</span> <span class="mf">5</span><span class="p">;</span> <span class="p">++</span><span class="nv">$i</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">:</span><span class="n">labelB</span>
+</span></span><span class="line"><span class="cl">    <span class="k">for</span> <span class="p">(</span><span class="nv">$j</span> <span class="p">=</span> <span class="mf">1</span><span class="p">;</span> <span class="nv">$j</span> <span class="o">-le</span> <span class="mf">3</span><span class="p">;</span> <span class="p">++</span><span class="nv">$j</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="err">:</span><span class="n">labelC</span>
+</span></span><span class="line"><span class="cl">        <span class="k">for</span> <span class="p">(</span><span class="nv">$k</span> <span class="p">=</span> <span class="mf">1</span><span class="p">;</span> <span class="nv">$k</span> <span class="o">-le</span> <span class="mf">2</span><span class="p">;</span> <span class="p">++</span><span class="nv">$k</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="c"># ...</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><blockquote>
 <p>实际上，对设计良好的代码，我们不应该需要这个特性，如果我们的代码中有多层循环，并且还有复杂的<code>break</code>需求，说明我们需要修改代码的设计，但是有总比没有好。</p>
 </blockquote>
@@ -1108,27 +1110,27 @@ Get-Power -exponent 3 -base 5
 <li>集合的<code>Keys</code> <code>Values</code></li>
 </ul>
 <p>示例：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 数组</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> ($e <span style="color:#66d9ef">in</span> $a) {
-</span></span><span style="display:flex;"><span>    ...
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 范围</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> ($e <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">-5</span>.<span style="color:#ae81ff">.5</span>) {
-</span></span><span style="display:flex;"><span>    ...
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 数组字面量</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> ($t <span style="color:#66d9ef">in</span> [<span style="color:#66d9ef">byte], [int], [long</span>]) {
-</span></span><span style="display:flex;"><span>    $t::MaxValue <span style="color:#75715e"># get static property</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 管道的输出</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> ($f <span style="color:#66d9ef">in</span> Get-ChildItem *.txt) {
-</span></span><span style="display:flex;"><span>    ...
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 集合的Keys或Values</span>
-</span></span><span style="display:flex;"><span>$h1 = @{ FirstName = <span style="color:#e6db74">&#34;James&#34;</span>; LastName = <span style="color:#e6db74">&#34;Anderson&#34;</span>; IDNum = <span style="color:#ae81ff">123</span> }
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> ($e <span style="color:#66d9ef">in</span> $h1.Keys) {
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;Key is &#34;</span> + $e + <span style="color:#e6db74">&#34;, Value is &#34;</span> + $h1[$e]
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># 数组</span>
+</span></span><span class="line"><span class="cl"><span class="k">foreach</span> <span class="p">(</span><span class="nv">$e</span> <span class="k">in</span> <span class="nv">$a</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 范围</span>
+</span></span><span class="line"><span class="cl"><span class="k">foreach</span> <span class="p">(</span><span class="nv">$e</span> <span class="k">in</span> <span class="mf">-5</span><span class="p">.</span><span class="mf">.5</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 数组字面量</span>
+</span></span><span class="line"><span class="cl"><span class="k">foreach</span> <span class="p">(</span><span class="nv">$t</span> <span class="k">in</span> <span class="p">[</span><span class="no">byte], [int], [long</span><span class="p">])</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$t</span><span class="p">::</span><span class="n">MaxValue</span> <span class="c"># get static property</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 管道的输出</span>
+</span></span><span class="line"><span class="cl"><span class="k">foreach</span> <span class="p">(</span><span class="nv">$f</span> <span class="k">in</span> <span class="nb">Get-ChildItem</span> <span class="p">*.</span><span class="n">txt</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 集合的Keys或Values</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$h1</span> <span class="p">=</span> <span class="vm">@</span><span class="p">{</span> <span class="n">FirstName</span> <span class="p">=</span> <span class="s2">&#34;James&#34;</span><span class="p">;</span> <span class="n">LastName</span> <span class="p">=</span> <span class="s2">&#34;Anderson&#34;</span><span class="p">;</span> <span class="n">IDNum</span> <span class="p">=</span> <span class="mf">123</span> <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="k">foreach</span> <span class="p">(</span><span class="nv">$e</span> <span class="k">in</span> <span class="nv">$h1</span><span class="p">.</span><span class="n">Keys</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;Key is &#34;</span> <span class="p">+</span> <span class="nv">$e</span> <span class="p">+</span> <span class="s2">&#34;, Value is &#34;</span> <span class="p">+</span> <span class="nv">$h1</span><span class="p">[</span><span class="nv">$e</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h3 id="流程控制语句">流程控制语句</h3>
 <p>以下语句和其他语言的设计类似，但有一些区别</p>
 <ul>
@@ -1144,95 +1146,95 @@ Get-Power -exponent 3 -base 5
 <p><code>$var = v1, v2, v3,...,vn</code></p>
 <p>在PowerSehll中访问数组元素，使用方括号，下标从<code>0</code>开始，支持负数、范围。对于多维数组，PowerShell使用类似Python的语法，即<code>arr[0,0]</code>这种形式。</p>
 <h3 id="数组的创建和访问">数组的创建和访问</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$arr = <span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span> <span style="color:#75715e"># 创建一维数组</span>
-</span></span><span style="display:flex;"><span>$mat = New-Object <span style="color:#e6db74">&#39;object[,]&#39;</span> <span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">2</span> <span style="color:#75715e"># 创建二维数组</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 一般访问</span>
-</span></span><span style="display:flex;"><span>$arr[<span style="color:#ae81ff">1</span>]
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 访问范围</span>
-</span></span><span style="display:flex;"><span>$arr[<span style="color:#ae81ff">1</span>.<span style="color:#ae81ff">.4</span>]
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 负数索引</span>
-</span></span><span style="display:flex;"><span>$arr[<span style="color:#ae81ff">-1</span>]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$arr</span> <span class="p">=</span> <span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="mf">4</span><span class="p">,</span><span class="mf">5</span> <span class="c"># 创建一维数组</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$mat</span> <span class="p">=</span> <span class="nb">New-Object</span> <span class="s1">&#39;object[,]&#39;</span> <span class="mf">2</span><span class="p">,</span><span class="mf">2</span> <span class="c"># 创建二维数组</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 一般访问</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$arr</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 访问范围</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$arr</span><span class="p">[</span><span class="mf">1</span><span class="p">.</span><span class="mf">.4</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 负数索引</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$arr</span><span class="p">[</span><span class="mf">-1</span><span class="p">]</span>
 </span></span></code></pre></div><h3 id="常用操作">常用操作</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$a = <span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 获取数组长度</span>
-</span></span><span style="display:flex;"><span>$a.Length
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 添加元素</span>
-</span></span><span style="display:flex;"><span>$a += <span style="color:#ae81ff">1</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 初始化空数组</span>
-</span></span><span style="display:flex;"><span>$a = @()
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 删除数组元素：PowerShell不直接支持删除数组，需要重新创建</span>
-</span></span><span style="display:flex;"><span>$a = ($a[<span style="color:#ae81ff">1</span>] $a[<span style="color:#ae81ff">2</span>] $a[<span style="color:#ae81ff">3</span>])
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 约束元素类型</span>
-</span></span><span style="display:flex;"><span>$a = [<span style="color:#66d9ef">int[]</span>](<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 复制数组</span>
-</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">Array</span>]::Copy($a,$b,<span style="color:#ae81ff">2</span>) <span style="color:#75715e"># 将前2个元素从 a 复制到 b</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$a</span> <span class="p">=</span> <span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="mf">4</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 获取数组长度</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$a</span><span class="p">.</span><span class="py">Length</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 添加元素</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$a</span> <span class="p">+=</span> <span class="mf">1</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 初始化空数组</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$a</span> <span class="p">=</span> <span class="vm">@</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 删除数组元素：PowerShell不直接支持删除数组，需要重新创建</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$a</span> <span class="p">=</span> <span class="p">(</span><span class="nv">$a</span><span class="p">[</span><span class="mf">1</span><span class="p">]</span> <span class="nv">$a</span><span class="p">[</span><span class="mf">2</span><span class="p">]</span> <span class="nv">$a</span><span class="p">[</span><span class="mf">3</span><span class="p">])</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 约束元素类型</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$a</span> <span class="p">=</span> <span class="p">[</span><span class="no">int[]</span><span class="p">](</span><span class="mf">1</span><span class="p">,</span><span class="mf">2</span><span class="p">,</span><span class="mf">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 复制数组</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="no">Array</span><span class="p">]::</span><span class="n">Copy</span><span class="p">(</span><span class="nv">$a</span><span class="p">,</span><span class="nv">$b</span><span class="p">,</span><span class="mf">2</span><span class="p">)</span> <span class="c"># 将前2个元素从 a 复制到 b</span>
 </span></span></code></pre></div><h3 id="负数下标">负数下标</h3>
 <p>类似Python，PowerShell接受负数下标。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 负数所以</span>
-</span></span><span style="display:flex;"><span>$arr[<span style="color:#ae81ff">-1</span>]
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># 负数所以</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$arr</span><span class="p">[</span><span class="mf">-1</span><span class="p">]</span>
 </span></span></code></pre></div><h3 id="数组切片">数组切片</h3>
 <p>数组切片是集合中若干个元素的副本，可以通过下标运算符创建</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$arr[<span style="color:#ae81ff">1</span>.<span style="color:#ae81ff">.4</span>]
-</span></span><span style="display:flex;"><span>$arr[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>]
-</span></span><span style="display:flex;"><span>$a[<span style="color:#ae81ff">-1</span>..<span style="color:#ae81ff">-3</span>]
-</span></span><span style="display:flex;"><span>$a[(<span style="color:#ae81ff">0</span>,<span style="color:#ae81ff">1</span>),(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">0</span>)] <span style="color:#75715e"># 二维</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$arr</span><span class="p">[</span><span class="mf">1</span><span class="p">.</span><span class="mf">.4</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$arr</span><span class="p">[</span><span class="mf">1</span><span class="p">,</span><span class="mf">3</span><span class="p">,</span><span class="mf">4</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$a</span><span class="p">[</span><span class="mf">-1</span><span class="p">..</span><span class="mf">-3</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$a</span><span class="p">[(</span><span class="mf">0</span><span class="p">,</span><span class="mf">1</span><span class="p">),(</span><span class="mf">1</span><span class="p">,</span><span class="mf">0</span><span class="p">)]</span> <span class="c"># 二维</span>
 </span></span></code></pre></div><h3 id="枚举数组">枚举数组</h3>
 <p>除了使用下标，我们还可以使用<code>foreach</code>语句来枚举数组元素。对于多维数组，使用行优先顺序。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$a = <span style="color:#ae81ff">10</span>, <span style="color:#ae81ff">53</span>, <span style="color:#ae81ff">16</span>, <span style="color:#ae81ff">-43</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> ($elem <span style="color:#66d9ef">in</span> $a) {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># do something with element via $e</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> ($elem <span style="color:#66d9ef">in</span> <span style="color:#ae81ff">-5</span>.<span style="color:#ae81ff">.5</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># do something with element via $e</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>$a = New-Object <span style="color:#e6db74">&#39;int[,]&#39;</span> <span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">2</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">foreach</span> ($elem <span style="color:#66d9ef">in</span> $a) {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># do something with element via $e</span>
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$a</span> <span class="p">=</span> <span class="mf">10</span><span class="p">,</span> <span class="mf">53</span><span class="p">,</span> <span class="mf">16</span><span class="p">,</span> <span class="mf">-43</span>
+</span></span><span class="line"><span class="cl"><span class="k">foreach</span> <span class="p">(</span><span class="nv">$elem</span> <span class="k">in</span> <span class="nv">$a</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># do something with element via $e</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">foreach</span> <span class="p">(</span><span class="nv">$elem</span> <span class="k">in</span> <span class="mf">-5</span><span class="p">.</span><span class="mf">.5</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># do something with element via $e</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nv">$a</span> <span class="p">=</span> <span class="nb">New-Object</span> <span class="s1">&#39;int[,]&#39;</span> <span class="mf">3</span><span class="p">,</span> <span class="mf">2</span>
+</span></span><span class="line"><span class="cl"><span class="k">foreach</span> <span class="p">(</span><span class="nv">$elem</span> <span class="k">in</span> <span class="nv">$a</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># do something with element via $e</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h2 id="哈希表">哈希表</h2>
 <p>在PowerShell中，哈希表分为无序或有序两种。与数组相同，也是作为引用类型存在。</p>
 <h3 id="哈希表的创建">哈希表的创建</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$variable_name = @{ &lt;key1&gt; = &lt;value1&gt; ; &lt; key2&gt; = &lt;value2&gt; ; ..... ; &lt; keyN&gt; = &lt;valueN&gt;;}
-</span></span><span style="display:flex;"><span>$variable_name = [<span style="color:#66d9ef">ordered</span>] @{ &lt; key1&gt; = &lt;value1&gt; ; &lt; key2&gt; = &lt;value2&gt; ; ..... ; &lt; keyN&gt; = &lt;valueN&gt;;}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$variable_name</span> <span class="p">=</span> <span class="vm">@</span><span class="p">{</span> <span class="p">&lt;</span><span class="n">key1</span><span class="p">&gt;</span> <span class="p">=</span> <span class="p">&lt;</span><span class="n">value1</span><span class="p">&gt;</span> <span class="p">;</span> <span class="p">&lt;</span> <span class="n">key2</span><span class="p">&gt;</span> <span class="p">=</span> <span class="p">&lt;</span><span class="n">value2</span><span class="p">&gt;</span> <span class="p">;</span> <span class="p">.....</span> <span class="p">;</span> <span class="p">&lt;</span> <span class="n">keyN</span><span class="p">&gt;</span> <span class="p">=</span> <span class="p">&lt;</span><span class="n">valueN</span><span class="p">&gt;;}</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$variable_name</span> <span class="p">=</span> <span class="p">[</span><span class="no">ordered</span><span class="p">]</span> <span class="vm">@</span><span class="p">{</span> <span class="p">&lt;</span> <span class="n">key1</span><span class="p">&gt;</span> <span class="p">=</span> <span class="p">&lt;</span><span class="n">value1</span><span class="p">&gt;</span> <span class="p">;</span> <span class="p">&lt;</span> <span class="n">key2</span><span class="p">&gt;</span> <span class="p">=</span> <span class="p">&lt;</span><span class="n">value2</span><span class="p">&gt;</span> <span class="p">;</span> <span class="p">.....</span> <span class="p">;</span> <span class="p">&lt;</span> <span class="n">keyN</span><span class="p">&gt;</span> <span class="p">=</span> <span class="p">&lt;</span><span class="n">valueN</span><span class="p">&gt;;}</span>
 </span></span></code></pre></div><h3 id="哈希表的属性">哈希表的属性</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>$hash.keys
-</span></span><span style="display:flex;"><span>$hash.values
-</span></span><span style="display:flex;"><span>$hash.count
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="nv">$hash</span><span class="p">.</span><span class="py">keys</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$hash</span><span class="p">.</span><span class="py">values</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$hash</span><span class="p">.</span><span class="py">count</span>
 </span></span></code></pre></div><h3 id="哈希表的crud">哈希表的CRUD</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 读、改</span>
-</span></span><span style="display:flex;"><span>$hash[<span style="color:#e6db74">&#34;key&#34;</span>] = newValue
-</span></span><span style="display:flex;"><span>$hash.Key = newValue
-</span></span><span style="display:flex;"><span>$hash[<span style="color:#ae81ff">20.5</span>] = newValue
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 增</span>
-</span></span><span style="display:flex;"><span>$hash.Add(key,value)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 删</span>
-</span></span><span style="display:flex;"><span>$hash.Remove(key)
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 遍历</span>
-</span></span><span style="display:flex;"><span>$hash.GetEnumerator() | Sort-Object -Property key
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># 串联</span>
-</span></span><span style="display:flex;"><span>$h1 += $h2
-</span></span><span style="display:flex;"><span>$h1 = $h1 + $h2
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># 读、改</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$hash</span><span class="p">[</span><span class="s2">&#34;key&#34;</span><span class="p">]</span> <span class="p">=</span> <span class="n">newValue</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$hash</span><span class="p">.</span><span class="py">Key</span> <span class="p">=</span> <span class="n">newValue</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$hash</span><span class="p">[</span><span class="mf">20.5</span><span class="p">]</span> <span class="p">=</span> <span class="n">newValue</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 增</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$hash</span><span class="p">.</span><span class="py">Add</span><span class="p">(</span><span class="n">key</span><span class="p">,</span><span class="n">value</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 删</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$hash</span><span class="p">.</span><span class="py">Remove</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 遍历</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$hash</span><span class="p">.</span><span class="py">GetEnumerator</span><span class="p">()</span> <span class="p">|</span> <span class="nb">Sort-Object</span> <span class="n">-Property</span> <span class="n">key</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 串联</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$h1</span> <span class="p">+=</span> <span class="nv">$h2</span>
+</span></span><span class="line"><span class="cl"><span class="nv">$h1</span> <span class="p">=</span> <span class="nv">$h1</span> <span class="p">+</span> <span class="nv">$h2</span>
 </span></span></code></pre></div><h2 id="函数-1">函数</h2>
 <h3 id="函数定义">函数定义</h3>
 <p>PowerShell的函数支持管道，还需要提供一些文档（用来响应Get-Help），还可以支持参数名在PowerShell中的自动补全。所以完整的函数定义是非常复杂的（幸运的是这些都是可选的），我们将逐步的介绍函数的定义规则。一个最简单的函数可以这样定义：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 包含关键字、函数名、参数列表、默认参数和类型定义、返回值的函数</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> Get-Power ([<span style="color:#66d9ef">long</span>]$base, [<span style="color:#66d9ef">int</span>]$exponent = <span style="color:#ae81ff">2</span>) {
-</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># body</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> $result
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># 包含关键字、函数名、参数列表、默认参数和类型定义、返回值的函数</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span><span class="w"> </span><span class="nb">Get-Power</span> <span class="p">([</span><span class="no">long</span><span class="p">]</span><span class="nv">$base</span><span class="p">,</span> <span class="p">[</span><span class="no">int</span><span class="p">]</span><span class="nv">$exponent</span> <span class="p">=</span> <span class="mf">2</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c"># body</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="nv">$result</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h3 id="函数属性">函数属性</h3>
 <p>可以在函数声明时指定一些属性</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 该函数在Get-Help中将显示一些帮助信息</span>
-</span></span><span style="display:flex;"><span>[Help(<span style="color:#e6db74">&#39;text&#39;</span>)]
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">function</span> Get-Power ([<span style="color:#66d9ef">long</span>]$base, [<span style="color:#66d9ef">int</span>]$exponent = <span style="color:#ae81ff">2</span>) {}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># 该函数在Get-Help中将显示一些帮助信息</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">Help</span><span class="p">(</span><span class="s1">&#39;text&#39;</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl"><span class="kd">function</span><span class="w"> </span><span class="nb">Get-Power</span> <span class="p">([</span><span class="no">long</span><span class="p">]</span><span class="nv">$base</span><span class="p">,</span> <span class="p">[</span><span class="no">int</span><span class="p">]</span><span class="nv">$exponent</span> <span class="p">=</span> <span class="mf">2</span><span class="p">)</span> <span class="p">{}</span>
 </span></span></code></pre></div><h3 id="筛选器函数">筛选器函数</h3>
 <p>普通函数在管道中运行一次，并通过 <code>$input</code> 访问输入集合，而 filter 是一种特殊类型的函数，它针对输入集合中的每个对象执行一次。 当前正在处理的对象可通过变量 <code>$_</code> 获取。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">filter</span> Get-Square2 { <span style="color:#75715e"># make the function a filter</span>
-</span></span><span style="display:flex;"><span>    $_ * $_ <span style="color:#75715e"># access current object from the collection</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">-3</span>.<span style="color:#ae81ff">.3</span> | Get-Square2 <span style="color:#75715e"># collection has 7 elements</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="kd">filter</span><span class="w"> </span><span class="nb">Get-Square2</span> <span class="p">{</span> <span class="c"># make the function a filter</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">$_</span> <span class="p">*</span> <span class="nv">$_</span> <span class="c"># access current object from the collection</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="mf">-3</span><span class="p">.</span><span class="mf">.3</span> <span class="p">|</span> <span class="nb">Get-Square2</span> <span class="c"># collection has 7 elements</span>
 </span></span></code></pre></div><h3 id="参数绑定">参数绑定</h3>
 <p>参数绑定按如下顺序进行</p>
 <ol>
@@ -1256,12 +1258,12 @@ Get-Power -exponent 3 -base 5
 <p><code>switch</code>又被称为开关参数，它的值仅有 <code>$true</code> <code>$false</code>两种。默认值为<code>$false</code>。调用时只需要输入对应的参数名，就可以将其设置为<code>$true</code>。</p>
 <h3 id="参数属性">参数属性</h3>
 <p>在参数定义时可以指定一些属性。例如：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">param</span> (
-</span></span><span style="display:flex;"><span>    [Parameter(<span style="color:#a6e22e">HelpMessage</span> = <span style="color:#e6db74">&#34;some text&#34;</span>)]
-</span></span><span style="display:flex;"><span>    [Alias(<span style="color:#e6db74">&#34;CN&#34;</span>)]
-</span></span><span style="display:flex;"><span>    [Alias(<span style="color:#e6db74">&#34;name&#34;</span>, <span style="color:#e6db74">&#34;system&#34;</span>)]
-</span></span><span style="display:flex;"><span>    [<span style="color:#66d9ef">string[]</span>] $ComputerName
-</span></span><span style="display:flex;"><span>)
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="k">param</span> <span class="p">(</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nb">Parameter</span><span class="p">(</span><span class="na">HelpMessage</span> <span class="p">=</span> <span class="s2">&#34;some text&#34;</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nb">Alias</span><span class="p">(</span><span class="s2">&#34;CN&#34;</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="nb">Alias</span><span class="p">(</span><span class="s2">&#34;name&#34;</span><span class="p">,</span> <span class="s2">&#34;system&#34;</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span><span class="no">string[]</span><span class="p">]</span> <span class="nv">$ComputerName</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
 </span></span></code></pre></div><p>上述参数定义完成了：</p>
 <ol>
 <li>设置在<code>Get-Help</code>页面中，该参数会显示帮助信息</li>
@@ -1453,37 +1455,37 @@ Get-Power -exponent 3 -base 5
 <p>可编写能够针对不同方案执行不同操作的单个函数或 cmdlet。 方法是根据所需执行的操作公开相应的参数组。 此类参数分组称为“参数集”。</p>
 <p>参数属性<code>Prameter.ParameterSetName</code>指定形参所属的参数集。 此行为意味着每个参数集必须具有一个唯一参数，且该参数不存在于任何其他参数集中。</p>
 <p>对于属于多个参数集的参数，请为每个参数集添加 <code>Parameter</code> 属性。 这将允许以不同方式定义每个参数集中的参数。包含多个位置参数的参数集必须为每个参数定义唯一位置。 两个位置参数不能指定同一位置。如果某个参数未指定有参数集，则该参数属于所有参数集。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e"># 定义了两个参数集 Computer 和 User，参数SharedParam同时属于两个参数集</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">param</span> ( [Parameter(<span style="color:#a6e22e">Mandatory</span> = $true<span style="color:#960050;background-color:#1e0010">，</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ParameterSetName</span> = <span style="color:#e6db74">&#34;Computer&#34;</span>)]
-</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">string[]</span>] $ComputerName<span style="color:#960050;background-color:#1e0010">，</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>[Parameter(<span style="color:#a6e22e">Mandatory</span> = $true<span style="color:#960050;background-color:#1e0010">，</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ParameterSetName</span> = <span style="color:#e6db74">&#34;User&#34;</span>)]
-</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">string[]</span>] $UserName<span style="color:#960050;background-color:#1e0010">，</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>[Parameter(<span style="color:#a6e22e">Mandatory</span> = $true<span style="color:#960050;background-color:#1e0010">，</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ParameterSetName</span> = <span style="color:#e6db74">&#34;Computer&#34;</span>)]
-</span></span><span style="display:flex;"><span>[Parameter(<span style="color:#a6e22e">ParameterSetName</span> = <span style="color:#e6db74">&#34;User&#34;</span>)]
-</span></span><span style="display:flex;"><span>[<span style="color:#66d9ef">int</span>] $SharedParam = <span style="color:#ae81ff">5</span> )
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> ($PsCmdlet.<span style="color:#a6e22e">ParameterSetName</span> <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#34;Computer&#34;</span>)
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>	<span style="color:#75715e">#处理Computer</span>
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">elseif</span> ($PsCmdlet.<span style="color:#a6e22e">ParameterSetName</span> <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#34;User&#34;</span>)
-</span></span><span style="display:flex;"><span>{
-</span></span><span style="display:flex;"><span>	<span style="color:#75715e"># 处理User</span>
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="c"># 定义了两个参数集 Computer 和 User，参数SharedParam同时属于两个参数集</span>
+</span></span><span class="line"><span class="cl"><span class="k">param</span> <span class="p">(</span> <span class="p">[</span><span class="nb">Parameter</span><span class="p">(</span><span class="na">Mandatory</span> <span class="p">=</span> <span class="vm">$true</span><span class="err">，</span>
+</span></span><span class="line"><span class="cl"><span class="na">ParameterSetName</span> <span class="p">=</span> <span class="s2">&#34;Computer&#34;</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="no">string[]</span><span class="p">]</span> <span class="nv">$ComputerName</span><span class="err">，</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nb">Parameter</span><span class="p">(</span><span class="na">Mandatory</span> <span class="p">=</span> <span class="vm">$true</span><span class="err">，</span>
+</span></span><span class="line"><span class="cl"><span class="na">ParameterSetName</span> <span class="p">=</span> <span class="s2">&#34;User&#34;</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="no">string[]</span><span class="p">]</span> <span class="nv">$UserName</span><span class="err">，</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nb">Parameter</span><span class="p">(</span><span class="na">Mandatory</span> <span class="p">=</span> <span class="vm">$true</span><span class="err">，</span>
+</span></span><span class="line"><span class="cl"><span class="na">ParameterSetName</span> <span class="p">=</span> <span class="s2">&#34;Computer&#34;</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nb">Parameter</span><span class="p">(</span><span class="na">ParameterSetName</span> <span class="p">=</span> <span class="s2">&#34;User&#34;</span><span class="p">)]</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="no">int</span><span class="p">]</span> <span class="nv">$SharedParam</span> <span class="p">=</span> <span class="mf">5</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">if</span> <span class="p">(</span><span class="nv">$PsCmdlet</span><span class="p">.</span><span class="na">ParameterSetName</span> <span class="o">-eq</span> <span class="s2">&#34;Computer&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c">#处理Computer</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">elseif</span> <span class="p">(</span><span class="nv">$PsCmdlet</span><span class="p">.</span><span class="na">ParameterSetName</span> <span class="o">-eq</span> <span class="s2">&#34;User&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="c"># 处理User</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h3 id="从管道获得参数">从管道获得参数</h3>
 <p>使用<code>$input</code>可以从管道中获得参数，如下例子：</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> Get-Square1 {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">foreach</span> ($i <span style="color:#66d9ef">in</span> $input) {   <span style="color:#75715e"># iterate over the collection</span>
-</span></span><span style="display:flex;"><span>        $i * $i
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span><span style="color:#ae81ff">-3</span>.<span style="color:#ae81ff">.3</span> | Get-Square1
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="kd">function</span><span class="w"> </span><span class="nb">Get-Square1</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">foreach</span> <span class="p">(</span><span class="nv">$i</span> <span class="k">in</span> <span class="nv">$input</span><span class="p">)</span> <span class="p">{</span>   <span class="c"># iterate over the collection</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">$i</span> <span class="p">*</span> <span class="nv">$i</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="mf">-3</span><span class="p">.</span><span class="mf">.3</span> <span class="p">|</span> <span class="nb">Get-Square1</span>
 </span></span></code></pre></div><h3 id="生命周期块">生命周期块</h3>
 <p>如果函数从管道中获得参数，并且开启了<code>CmdletBinding</code>属性，我们可以使用一些块来在其不同的生命周期执行代码。他们包括</p>
 <ol>
@@ -1491,33 +1493,33 @@ Get-Power -exponent 3 -base 5
 <li><code>process</code></li>
 <li><code>end</code></li>
 </ol>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> Get-Square1 {
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">begin</span>{
-</span></span><span style="display:flex;"><span>			echo <span style="color:#e6db74">&#34;Begin&#34;</span>
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">process</span>{
-</span></span><span style="display:flex;"><span>      $_ = $_ * $_
-</span></span><span style="display:flex;"><span>		}
-</span></span><span style="display:flex;"><span>		
-</span></span><span style="display:flex;"><span>		<span style="color:#66d9ef">foreach</span> ($i <span style="color:#66d9ef">in</span> $input) {   <span style="color:#75715e"># iterate over the collection</span>
-</span></span><span style="display:flex;"><span>        echo $i
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">end</span>{
-</span></span><span style="display:flex;"><span>    	echo <span style="color:#e6db74">&#34;End&#34;</span>
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="kd">function</span><span class="w"> </span><span class="nb">Get-Square1</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">begin</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">			<span class="nb">echo </span><span class="s2">&#34;Begin&#34;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		<span class="k">process</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nv">$_</span> <span class="p">=</span> <span class="nv">$_</span> <span class="p">*</span> <span class="nv">$_</span>
+</span></span><span class="line"><span class="cl">		<span class="p">}</span>
+</span></span><span class="line"><span class="cl">		
+</span></span><span class="line"><span class="cl">		<span class="k">foreach</span> <span class="p">(</span><span class="nv">$i</span> <span class="k">in</span> <span class="nv">$input</span><span class="p">)</span> <span class="p">{</span>   <span class="c"># iterate over the collection</span>
+</span></span><span class="line"><span class="cl">        <span class="nb">echo </span><span class="nv">$i</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    
+</span></span><span class="line"><span class="cl">    <span class="k">end</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    	<span class="nb">echo </span><span class="s2">&#34;End&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h3 id="定义参数的另一种方式-param块和dynamicparam块">定义参数的另一种方式-Param块和DynamicParam块</h3>
 <p>示例代码展示了使用方法，首先定义两个静态参数，如果<code>$str</code>参数满足条件，<code>QI</code>参数及其默认值才是可用的。</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#66d9ef">function</span> fun {
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">param</span> ([<span style="color:#66d9ef">string</span>]$str, [<span style="color:#66d9ef">int</span>]$start_pos = <span style="color:#ae81ff">0</span>);
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">DynamicParam</span>{
-</span></span><span style="display:flex;"><span>    	<span style="color:#66d9ef">if</span>($srt <span style="color:#f92672">-eq</span> <span style="color:#e6db74">&#34;*Qisumi&#34;</span>){
-</span></span><span style="display:flex;"><span>    		$paramDictionary.Add(<span style="color:#e6db74">&#34;QI&#34;</span>,$Default)
-</span></span><span style="display:flex;"><span>    		<span style="color:#66d9ef">return</span> $paramDictionary
-</span></span><span style="display:flex;"><span>    	}
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span>}
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="kd">function</span><span class="w"> </span><span class="nb">fun</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">param</span> <span class="p">([</span><span class="no">string</span><span class="p">]</span><span class="nv">$str</span><span class="p">,</span> <span class="p">[</span><span class="no">int</span><span class="p">]</span><span class="nv">$start_pos</span> <span class="p">=</span> <span class="mf">0</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="k">DynamicParam</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    	<span class="k">if</span><span class="p">(</span><span class="nv">$srt</span> <span class="o">-eq</span> <span class="s2">&#34;*Qisumi&#34;</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    		<span class="nv">$paramDictionary</span><span class="p">.</span><span class="py">Add</span><span class="p">(</span><span class="s2">&#34;QI&#34;</span><span class="p">,</span><span class="nv">$Default</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    		<span class="k">return</span> <span class="nv">$paramDictionary</span>
+</span></span><span class="line"><span class="cl">    	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><h3 id="param块属性-outputtype">Param块属性 OutputType</h3>
 <table>
 <thead>
@@ -1537,9 +1539,9 @@ Get-Power -exponent 3 -base 5
 </tr>
 </tbody>
 </table>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span>[OutputType([<span style="color:#66d9ef">int</span>])] <span style="color:#66d9ef">param</span> ( ... )
-</span></span><span style="display:flex;"><span>[OutputType(<span style="color:#e6db74">&#34;double&#34;</span>)] <span style="color:#66d9ef">param</span> ( ... )
-</span></span><span style="display:flex;"><span>[OutputType(<span style="color:#e6db74">&#34;string&#34;</span>,<span style="color:#e6db74">&#34;string&#34;</span>)] <span style="color:#66d9ef">param</span> ( ... )
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="p">[</span><span class="n">OutputType</span><span class="p">([</span><span class="no">int</span><span class="p">])]</span> <span class="k">param</span> <span class="p">(</span> <span class="p">...</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">OutputType</span><span class="p">(</span><span class="s2">&#34;double&#34;</span><span class="p">)]</span> <span class="k">param</span> <span class="p">(</span> <span class="p">...</span> <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="n">OutputType</span><span class="p">(</span><span class="s2">&#34;string&#34;</span><span class="p">,</span><span class="s2">&#34;string&#34;</span><span class="p">)]</span> <span class="k">param</span> <span class="p">(</span> <span class="p">...</span> <span class="p">)</span>
 </span></span></code></pre></div><h3 id="部分只允许在工作流中使用的块">部分只允许在工作流中使用的块</h3>
 <p>它们包括<code>parallel sequence inlinescipt</code>，参考<a href="https://learn.microsoft.com/zh-cn/powershell/scripting/lang-spec/chapter-08?view=powershell-7.2#8102-workflow-functions">工作流</a>。</p>
 <h2 id="基于注释的帮助">基于注释的帮助</h2>
@@ -1557,19 +1559,19 @@ Get-Power -exponent 3 -base 5
 <li>在脚本文件的开头，可以只在前面加上注释和空白行。 如果帮助后脚本的第一项是函数定义，则脚本帮助的末尾和该函数声明之间必须至少有两个空白行。 否则，帮助将被解释为应用于函数而非脚本文件。</li>
 <li>在脚本文件的末尾。</li>
 </ul>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-powershell" data-lang="powershell"><span style="display:flex;"><span><span style="color:#75715e">&lt;#
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;help-directive-1&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;help-content-1&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">...
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;help-directive-n&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;help-content-n&gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#&gt;</span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">&lt;#
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">.</span><span style="color:#e6db74">DESCRIPTION</span><span style="color:#75715e">
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">Computes Base to the power Exponent. Supports non-negative integer
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">powers only.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">#&gt;</span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-powershell" data-lang="powershell"><span class="line"><span class="cl"><span class="cm">&lt;#
+</span></span></span><span class="line"><span class="cl"><span class="cm">&lt;help-directive-1&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cm">&lt;help-content-1&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cm">...
+</span></span></span><span class="line"><span class="cl"><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">&lt;help-directive-n&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cm">&lt;help-content-n&gt;
+</span></span></span><span class="line"><span class="cl"><span class="cm">#&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="cm">&lt;#
+</span></span></span><span class="line"><span class="cl"><span class="cm">.</span><span class="sd">DESCRIPTION</span><span class="cm">
+</span></span></span><span class="line"><span class="cl"><span class="cm">Computes Base to the power Exponent. Supports non-negative integer
+</span></span></span><span class="line"><span class="cl"><span class="cm">powers only.
+</span></span></span><span class="line"><span class="cl"><span class="cm">#&gt;</span>
 </span></span></code></pre></div><h3 id="帮助命令">帮助命令</h3>
 <table>
 <thead>
@@ -1866,6 +1868,8 @@ Get-Power -exponent 3 -base 5
 
 
 
+
+  <script src="/js/prism.js"></script>
 
 
 </body>
