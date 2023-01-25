@@ -1,0 +1,16 @@
+<?xml-stylesheet type="text/xsl" href="https://qisumi.github.io/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>https://qisumi.github.io/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qisumi.github.io/</loc>
+  </url>
+  
+  <url>
+    <loc>https://qisumi.github.io/tags/</loc>
+  </url>
+  
+</urlset>
